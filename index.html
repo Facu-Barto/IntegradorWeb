@@ -1,46 +1,81 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sonido Montañez Medina</title>
-    <link rel="stylesheet" href="estilos/cssestilos.css">
+
+    <!--Enlace a los estilos CSS.-->
+    <link rel="stylesheet" href="estilos/estilos.css">
 </head>
+
 <body>
-    <div class="titulo">
-        
-    <h1><img src="img/logo.png" alt="logo de la marca" class="logo">Sonido Montañez Medina</h1>
-    </div>
-    <div class="menu">
-    <ul>
-        <li><a href="index.html">Inicio</a></li>
-        <li><a href="DJ.html">Servicio DJ</a></li>
-        <li><a href="Reparacion.html">Servicio de Sonido</a></li>
-    </ul>
-    </div>
-    <div class="carrusel">
-        <button class="boton" id="anterior">&#10094;</button>
-        <div class="pista" id="pista">
-            <div class="tarjeta"><img src="img/imgJoda1.jpeg" alt="jodiña"></div>
-            <div class="tarjeta">img2</div>
-            <div class="tarjeta">img3</div>
-            <div class="tarjeta">img4</div>
-        </div>
-        <button class="boton" id="siguiente">&#10095;</button>
 
-    </div>
+    <!--Sección del Titulo y del menú de navegación.-->
+    <header class="titulo">
+        <h1> <img src="img/logo.png" alt="logo de la marca" id="logo"> Sonido Montañez Medina </h1>
+        <p>Servicios De DJ Y Sonido Profesional</p>
 
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="servicios-dj.html">Servicio DJ</a></li>
+                <li><a href="servicios-sonido.html">Servicio de Sonido</a></li>
+                <li><a href="contacto.html">Contactanos</a></li>
+            </ul>
+        </nav>
+    </header>
 
-<script src="javascript/js.js"></script>
+    <main>
+
+        <!--Sección del Carrusel. Se puede agregar varias tarjetas.-->
+        <section class="seccion-carrusel">
+            <div id="contenedor-carrusel">
+                <button id="btn-carrusel-ant">&#10094;</button>
+
+                <div id="pista">
+                    <div class="tarjeta-carrusel"> 1 </div>
+                    <div class="tarjeta-carrusel"> 2 </div>
+                    <div class="tarjeta-carrusel"> 3 </div>
+                    <div class="tarjeta-carrusel"> 4 </div>
+                    <div class="tarjeta-carrusel"> 5 </div>
+                    <div class="tarjeta-carrusel"> 6 </div>
+                </div>
+                <button id="btn-carrusel-pos">&#10095;</button>
+            </div>
+        </section>
+
+        <!--Sección de la Galeria de fotos. Agregamos las fotos o videos que sean necesarios.-->
+        <section class="seccion-galeria">
+            <div class="galeria">
+                <article>
+                    <img src="" alt="img 1">
+                </article>
+                <article>
+                    <img src="" alt="img 2">
+                </article>
+                <article>
+                    <img src="" alt="img 3">
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!--Conexión con javaScript.-->
+    <script src="javascript/js.js"></script>
 </body>
-<footer class="pie">
-    <div class="contenidopie">
+
+<!--Footer del documento.-->
+<footer class="footer-documento">
+    <div class="contenido-footer">
         <p>&copy; 2026 DJ & Sonido. Todos los derechos reservados.</p>
-        <div class="redessociales">
+        <div class="redes-sociales">
             <a href="">Instagram</a>
             <a href="">Whatsapp</a>
             <a href="">E-mail</a>
         </div>
     </div>
 </footer>
+
 </html>
