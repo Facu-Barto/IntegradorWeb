@@ -1,30 +1,49 @@
 body{
     margin: 0;
     padding: 0;
-    background-image: url('../img/fondobody.jpeg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    background-image: url('../img/fondo.jpeg');
+    background-size: 300px;
+    background-repeat: repeat;
     background-attachment: fixed;
+    background-color: #000000 ;
 }
 
 .titulo{
-    background-color: navy;
+    background-image: url('../img/fondopie.jpeg');
+    background-position: center;
+    background-color: rgb(0, 0, 0);
 }
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@800;900&display=swap');
 .titulo h1{
+    font-family: 'Montserrat',sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 2px;
     margin-top:0; margin-bottom: 0;
-    color: beige;
+    color: #ffffff;
+    
     text-align: center;
     padding: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    font-size: 2.2rem;
+    font-weight: 900;
     
+}
+.logo{
+    width: 100px;
+    height: auto;
+    filter: drop-shadow(0 0 8px navy);
 }
 .menu ul{
     margin: 0;
     list-style-type: none;
     overflow: hidden;
-    background-color: darkslategrey;
-    padding: 10px 15px 10px 0;
-    border: 0;
+    background-color: rgba(15, 15, 26, 0.9);
+    backdrop-filter: blur(5px);
+    display: flex;
+    padding: 19px 15px;
 }
 .menu ul li{
     float: left;
@@ -44,7 +63,6 @@ text-decoration: none;
     background-color: navy;
     text-align: center;
     padding: 20px 0;
-    border-top: 2px solid;
 }
 .contenidopie{
     margin: 0 auto;
@@ -68,7 +86,8 @@ background-color: red;
 }
 .carrusel{
     position: relative;
-    max-width: 90%;
+    width: 100%;
+    max-width: 1000px;
     margin: 50px auto;
     display: flex;
     align-items: center;
@@ -78,6 +97,7 @@ background-color: red;
     gap: 20px;
     overflow-x: auto;
     scroll-behavior: smooth;
+    scroll-snap-type: x mandatory;
     width: 100%;
     padding: 10px 0;
 }
@@ -85,9 +105,9 @@ background-color: red;
     display: none;
 }
 .tarjeta{
-    min-width: 220px;
+    min-width: 100%;
     height: 500px;
-    width: 500px;
+    width: 100%;
     background-color: blueviolet;
     color: beige;
     display: flex;
@@ -96,6 +116,8 @@ background-color: red;
     border-radius: 12px;
     font-weight: bold;
     border: 2px solid cadetblue;
+    box-sizing: border-box;
+    scroll-snap-align: start;
 }
 .boton {
     background-color:navy;
