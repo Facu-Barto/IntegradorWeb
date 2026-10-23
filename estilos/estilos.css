@@ -9,7 +9,7 @@ body {
     font-family: sans-serif, Arial;
 
     background-color: darkslategray;
-    background-image: url('../img/fondo.jpeg');
+    background-image: url('../img/Fondos/fondoBody.jpeg');
     background-repeat: repeat;
     background-size: 280px;
     background-attachment: fixed;
@@ -23,7 +23,7 @@ body {
 /*Header, titulo, logo, menu nav*/
 header.titulo {
     background-color: black;
-    background-image: url('../img/fondoTitulo.jpeg');
+    background-image: url('../img/Fondos/fondoTitulo.jpeg');
     padding: 30px 0 0 0;
     text-align: left;
     border-bottom: 3px solid darkgray;
@@ -356,6 +356,7 @@ section {
     font-size: 0.7rem;
     font-weight: bold;
     letter-spacing: 1px;
+    margin-top: 12px;
     margin-bottom: 12px;
     text-transform: uppercase;
     border-bottom: 1px solid #ffffff;
