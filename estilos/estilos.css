@@ -22,7 +22,7 @@ body {
 
 /*Header, titulo, logo, menu nav*/
 header.titulo {
-    background-color: white;
+    background-color: black;
     background-image: url('../img/fondoTitulo.jpeg');
     padding: 30px 0 0 0;
     text-align: left;
@@ -214,35 +214,12 @@ section {
     font-size: 0.85rem;
 }
 
-.contenido-footer {
-    max-width: 1100px;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    align-items: center;
-}
-
-.redes-sociales {
-    display: flex;
-    gap: 20px;
-}
-
-.redes-sociales a {
-    color: whitesmoke;
-    text-decoration: none;
-    font-weight: 600;
-}
-
-.redes-sociales a:hover {
-    text-shadow: 0 0 8px orange;
-}
 .subtitu{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 70px;
-     width: 180px;    
+    width: 180px;    
     margin:20px auto;
     margin-bottom: 0;
     border: 5px solid darkgray;
@@ -317,9 +294,9 @@ section {
 }
 .listainfo ul{
     transform: translateY(-5px);
-   list-style: none;
-  padding: 0;
-  margin: 0;
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
 
 .listainfo li{
@@ -335,5 +312,138 @@ section {
     width: 18px;
     height: 18px;
     object-fit: contain;
+}  
+
+/*Aca para abajo es el footer*/
+.footer-del-sitio {
+    background-color: rgb(33, 33, 33);
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    border-top: 2px solid #ffffff;
+    padding-top: 20px;
 }
-     
+
+.footer-container {
+    max-width: 100%;
+    margin: 0 auto;
+    display: grid;
+    padding: 0px 30px 20px 30px;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 60px;
+}
+
+.footer-columna {
+    display: flex;
+    flex-direction: column;
+}
+
+/*Columna de empresa*/
+.caja-de-marca {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.titulo-marca {
+    font-size: 0.90rem;
+    font-weight: bolder;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+/*Columna de contacto y ubicacion*/
+.footer-contacto-y-ubicacion {
+    font-size: 0.7rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    border-bottom: 1px solid #ffffff;
+    padding-bottom: 4px;
+    display: inline-block;
+}
+
+.footer-texto {
+    font-size: 0.78rem;
+    color: #aaaaaa;
+    line-height: 1.5;
+    margin: 10px;
+    text-align: center;
+    margin-top: -15px;
+}
+
+/* Lista de contactos */
+.footer-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.contacto-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.70rem;
+    color: rgb(223, 223, 223);
+}
+
+.contacto-item a {
+    color: rgb(223, 223, 223);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    transition: color 0.2s ease;
+}
+
+.contacto-item a:hover {
+    color: rgb(122, 192, 216);
+}
+
+/*Iconos Y logo*/
+.caja-logo, .caja-icon {
+    width: 25px;
+    height: 25px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.caja-logo-footer {
+    width: 128px;
+    height: 128px;
+    flex-shrink: 0;
+}
+
+#logo-footer {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.footer-icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+}
+
+.footer-icon-argentina{
+    width: 20px;
+    height: auto;
+    display: block;
+}
+
+/*Barra Copyriht*/
+.footer-bottom {
+    background-color: black;
+    text-align: center;
+    padding: 10px;
+    font-size: 0.75rem;
+    color: rgb(90, 90, 90);
+    letter-spacing: 0.50px;
+}
