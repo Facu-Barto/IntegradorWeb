@@ -11,11 +11,10 @@
 </head>
 
 <body>
-
 <!--Sección del Titulo y del menú de navegación.-->
     <header class="header-principal">
         <div class="caja-logo-header">
-            <img src="img/logo.png" alt="Logo de Sonido Montañez Medina" id="logo-header">
+            <img src="img/logoSolo.png" alt="Logo de Sonido Montañez Medina" id="logo-header">
             <span class="nombre-marca">Sonido Montañez Medina</span>
         </div>
 
@@ -30,12 +29,18 @@
     </header>
 
     <main>
+        <section class="seccion-bienvenida">
+
+        <h2>Sonido e Iluminación Profesional</h2>
+        <p>Brindamos soluciones integrales para todo tipo de eventos. Ya sea que necesites contratar a nuestros DJs en vivo para musicalizar tu fiesta, o alquilar equipos de alta fidelidad y solicitar soporte técnico especializado, estamos para llevar tu evento al siguiente nivel.</p>
+        </section>
+            
 
         <!--Sección del Carrusel. Se puede agregar varias tarjetas.-->
+        <h2 class="subtitulos">Destacado</h2>
         <section class="seccion-carrusel">
             <div id="contenedor-carrusel">
-                <button id="btn-carrusel-ant">&#10094;</button>
-
+                <button id="btn-carrusel-ant"> a </button>
                 <div id="pista">
                     <div class="tarjeta-carrusel"> 1 </div>
                     <div class="tarjeta-carrusel"> 2 </div>
@@ -44,11 +49,54 @@
                     <div class="tarjeta-carrusel"> 5 </div>
                     <div class="tarjeta-carrusel"> 6 </div>
                 </div>
-                <button id="btn-carrusel-pos">&#10095;</button>
+                <button id="btn-carrusel-pos"> d </button>
+            </div>
+        </section>
+
+        <section class="seccion-servicios-base">
+            <h2>Nuestras Opciones y Presupuestos</h2>
+            <p>Conocé las alternativas disponibles para armar la propuesta perfecta para tu evento.</p>
+
+            <div class="contenedor-columnas">
+                <!-- Opción 1: Presupuesto Pequeño -->
+                <article class="columna-servicio">
+                    <h3>Presupuesto Pequeño</h3>
+                    <p class="sub-espacio"><strong>Espacio:</strong> Aprox. 200 m²</p>
+                    <p>Ideal para eventos íntimos. Incluye servicio de DJ e iluminación adaptada al salón.</p>
+                </article>
+
+                <!-- Opción 2: Presupuesto Mediano -->
+                <article class="columna-servicio">
+                    <h3>Presupuesto Mediano</h3>
+                    <p class="sub-espacio"><strong>Espacio:</strong> Aprox. 900 m²</p>
+                    <p>Perfecto para fiestas masivas. Incluye DJ e iluminación de alta potencia[cite: 10].</p>
+                </article>
+
+                <!-- Opción 3: Presupuesto Grande -->
+                <article class="columna-servicio">
+                    <h3>Presupuesto Grande</h3>
+                    <p class="sub-espacio"><strong>Espacio:</strong> Mayores a 900 m²</p>
+                    <p>Para grandes eventos. Incluye DJ, iluminación y sistemas adicionales para ambientes extras[cite: 10].</p>
+                </article>
+                
+                <!-- Opción 4: Servicios de DJ -->
+                <article class="columna-servicio">
+                    <h3>DJs en Vivo</h3>
+                    <p class="sub-espacio"><strong>Artistas:</strong> Nano Medina & Yani Montañez</p>
+                    <p>Musicalización personalizada, mezclas en vivo con equipos Pioneer y la mejor energía para la pista.</p>
+                </article>
+
+                <!-- Opción 5: Mantenimiento y Reparación -->
+                <article class="columna-servicio">
+                    <h3>Mantenimiento Técnico</h3>
+                    <p class="sub-espacio"><strong>Reparación de Equipos</strong></p>
+                    <p>Revisión, reparación y puesta a punto de parlantes, amplificadores y consolas de audio.</p>
+                </article>
             </div>
         </section>
 
         <!--Sección de la Galeria de fotos. Agregamos las fotos o videos que sean necesarios.-->
+        <h2 class="subtitulos">Galeria</h2>
         <section class="seccion-galeria">
             <div class="galeria">
                 <article>
@@ -90,7 +138,6 @@
             </div>
         </section>
     </main>
-
     <!--Conexión con javaScript.-->
     <script src="javascript/js.js"></script>
 </body>
@@ -106,7 +153,7 @@
                 </div>
                 <h3 class="titulo-marca">Sonido Montañez Medina</h3>
             </div>
-            <span class="footer-texto">Música e iluminación profesional para tu evento</span>
+            <span class="footer-texto">Sonido e iluminación profesional</span>
         </div>
 
         <!--Columna 2 de footer: Contacto y Ubicación-->
