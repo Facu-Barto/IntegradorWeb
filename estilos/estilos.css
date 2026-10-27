@@ -37,8 +37,13 @@ section {
 
 .subtitulos {
     text-align: center;
-    padding: 10px 0;
-    color: #222831;
+    padding: 15px;
+    color: #EEEEEE;
+    text-decoration: underline;
+    text-decoration-color: #FFD369;
+    font-size: 1.8rem;
+    font-weight: 800;
+    text-transform: uppercase;
 }
 
 /*
@@ -104,78 +109,162 @@ Header
 
 /*
 3.
-Seccion De Bienvenida
+Seccion Header de todas las secciones.
 */
 
-.seccion-bienvenida {
-    background-color: #ffffff;
-    padding: 45px 35px;
-    border-radius: 16px;
-    border-left: 6px solid #FFD369; /* Franja lateral elegante */
-    box-shadow: 0 10px 30px rgba(34, 40, 49, 0.05); /* Sombra difuminada muy moderna */
+.seccion-header {
     text-align: center;
-    margin-bottom: 45px;
+    margin-bottom: 35px;
 }
 
-.seccion-bienvenida h2 {
-    color: #222831;
-    font-size: 2rem;
+.seccion-header h2 {
+    color: #EEEEEE;
+    font-size: 1.8rem;
     font-weight: 800;
-    margin-bottom: 15px;
-    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
 }
 
-.seccion-bienvenida p {
-    font-size: 1.05rem;
-    color: #393E46;
-    line-height: 1.7;
-    max-width: 800px;
-    margin: 0 auto;
+.seccion-header h2::after {
+    content: '';
+    display: block;
+    width: 200px;
+    height: 3px;
+    background-color: #FFD369;
+    margin: 8px auto 0 auto;
+    border-radius: 2px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+}
+
+.seccion-header p {
+    color: #EEEEEE;
+    font-size: 0.9rem;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.8);
 }
 
 /*
 4.
+Seccion De Bienvenida
+*/
+
+.seccion-bienvenida {
+    background-color: rgba(34, 40, 49, 0.5);
+    border: 1px solid #393E46;
+    border-top: 5px solid #FFD369;
+    border-radius: 16px;
+    padding: 35px 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    color: #EEEEEE;
+    margin-bottom: 25px;
+}
+
+.seccion-bienvenida h2 {
+    color: #EEEEEE;
+    font-size: 1.5rem;
+    font-weight: 800;
+    margin-bottom: 15px;
+    text-align: left;
+    letter-spacing: 0.5px;
+}
+
+.bienvenida-desc {
+    font-size: 0.95rem;
+    color: #DDDDDD;
+    line-height: 1.4;
+    margin-bottom: 25px;
+    text-align: left;
+}
+
+.bienvenida-lista {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.bienvenida-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+}
+
+.bienvenida-icono {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;;
+    padding: 8px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+}
+
+.bienvenida-icono img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    filter: invert(1);
+}
+
+.bienvenida-item h3 {
+    color: #FFD369;
+    font-size: 1.05rem;
+    font-weight: 700;
+    margin-bottom: 4px;
+    text-align: left;
+}
+
+.bienvenida-item p {
+    color: #CCCCCC;
+    font-size: 0.88rem;
+    line-height: 1.5;
+    text-align: left;
+    margin: 0;
+}
+
+/*
+5.
 Seccion Del Carrusel
 */
 
 .seccion-carrusel {
     width: 100%;
-    padding: 20px 0 10px 0;
+    padding: 20px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-#contenedor-carrusel {
+.contenedor-carrusel {
     position: relative;
     display: flex;
     align-items: center;
+    justify-content: center;
     background: #393E46;
     border: 1px solid #393E46;
     border-radius: 12px;
     overflow: hidden;
-}
-
-#pista {
-    display: flex;
+    max-width: 420px;
     width: 100%;
-    overflow-x: auto;
-    scroll-behavior: smooth;
-    scroll-snap-type: x mandatory;
-}
-
-#pista::-webkit-scrollbar {
-    display: none;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
 }
 
 .tarjeta-carrusel {
-    min-width: 100%;
-    height: 320px;
-    scroll-snap-align: start;
+    width: 100%;
+    height: 520px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #FFD369;
     background: #222831;
+}
+
+.tarjeta-carrusel img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
 }
 
 .seccion-carrusel button {
@@ -185,12 +274,15 @@ Seccion Del Carrusel
     background: #EEEEEE;
     color: #222831;
     border: 1px solid #393E46;
-    font-size: 25px;
-    width: 60px;
-    height: 60px;
+    font-size: 22px;
+    width: 45px;
+    height: 45px;
     border-radius: 50%;
     cursor: pointer;
     z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     transition: background 0.3s, color 0.3s;
 }
 
@@ -200,46 +292,18 @@ Seccion Del Carrusel
     box-shadow: inset 0 0 0 3px #EEEEEE;
 }
 
-#btn-carrusel-ant { left: 15px; }
-#btn-carrusel-pos { right: 15px; }
+#btn-carrusel-anterior { 
+    left: 15px; 
+}
+
+#btn-carrusel-posterior { 
+    right: 15px; 
+}
 
 /*
-5.
+6.
 Seccion de servicios
 */
-
-.seccion-servicios-base, .seccion-equipamiento {
-    width: 100%;
-    margin-bottom: 50px;
-}
-
-.seccion-servicios-base h2, .seccion-equipamiento h2 {
-    text-align: center;
-    color: #222831;
-    font-size: 1.8rem;
-    font-weight: 800;
-    margin-bottom: 10px;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    position: relative;
-}
-
-.seccion-servicios-base h2::after, .seccion-equipamiento h2::after {
-    content: '';
-    display: block;
-    width: 50px;
-    height: 4px;
-    background-color: #FFD369;
-    margin: 8px auto 0 auto;
-    border-radius: 2px;
-}
-
-.seccion-servicios-base p, .seccion-equipamiento p {
-    text-align: center;
-    color: #393E46;
-    margin-bottom: 30px;
-    font-size: 0.95rem;
-}
 
 .contenedor-columnas {
     display: flex;
@@ -248,87 +312,120 @@ Seccion de servicios
     justify-content: center;
 }
 
-/* Tarjetas individuales de cada servicio */
-.columna-servicio {
-    flex: 1 1 300px; 
-    max-width: 350px;
-    background: #ffffff;
-    border: none;
-    border-top: 4px solid #FFD369; /* Detalle superior de color clave */
+.tarjeta-servicio {
+    flex: 1 1 320px;
+    max-width: 360px;
+    height: 420px;
     border-radius: 16px;
-    padding: 30px 25px;
-    box-shadow: 0 10px 25px rgba(34, 40, 49, 0.06);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+    background-size: cover;
+    background-position: center;
+    background-color: #222831;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    border: 1px solid #393E46;
 }
 
-.columna-servicio:hover {
-    transform: translateY(-8px); /* Efecto flotante al pasar el mouse */
-    box-shadow: 0 15px 35px rgba(255, 211, 105, 0.3);
+.tarjeta-overlay {
+    background: linear-gradient(180deg, rgba(34, 40, 49, 0.5) 0%, rgba(34, 40, 49, 0.75) 100%);
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
-.columna-servicio h3 {
+.tarjeta-contenido h3 {
+    color: #EEEEEE;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.etiqueta-info {
+    font-size: 0.8rem;
     color: #222831;
-    font-size: 1.2rem;
-    font-weight: 700;
-    margin-bottom: 12px;
-    text-align: center;
-}
-
-.sub-espacio {
-    font-size: 0.75rem;
-    color: #393E46;
-    background-color: #EEEEEE;
-    padding: 6px 12px;
+    background-color: #FFD369;
+    padding: 5px 10px;
     border-radius: 20px;
     display: inline-block;
     margin-bottom: 15px;
     text-transform: uppercase;
     letter-spacing: 0.5px;
-    font-weight: 600;
+    font-weight: 400;
 }
 
-.columna-servicio p {
-    color: #393E46;
+.tarjeta-contenido p {
+    color: #EEEEEE;
     font-size: 0.9rem;
-    line-height: 1.6;
+    line-height: 1.4;
+    text-align: left;
+    margin: 0;
 }
 
-/*
-7. 
-Seccion galeria de fotos
-*/
-
-.seccion-galeria {
-    width: 100%;
-    padding: 20px 0 10px 0;
+.lista-ejemplos-evento {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
 }
 
-.galeria {
-    column-count: 6;
-    column-gap: 12px;
+.lista-ejemplos-evento li {
+    font-size: 0.85rem;
+    color: rgb(200, 200, 200);
+    position: relative;
+    padding-left: 18px;
+    line-height: 1.2;
 }
 
-.galeria article {
-    break-inside: avoid;
-    margin-bottom: 12px;
-    flex: 1 1 300px;
-    height: 220px;
-    border-radius: 12px;
-    overflow: hidden;
-    border: 1px solid #393E46;
-    background: #222831;
+.lista-ejemplos-evento li::before {
+    content: "•";
+    color: #FFD369;
+    font-size: 1rem;
+    position: absolute;
+    left: 4px;
+    top: -1px;
 }
 
-.galeria article img {
-    display: block;
-    width: 100%;
-    height: auto;
-    object-fit: cover;
-    transition: transform 0.4s ease;
+.btn-tarjeta {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    text-decoration: none;
+    color: #EEEEEE;
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding-top: 15px;
+    border-top: 1px solid #222831;
 }
 
-.galeria article:hover img {
-    transform: scale(1.08);
+.circulo-flecha {
+    width: 36px;
+    height: 36px;
+    background-color: #EEEEEE;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.icono-flecha {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+
+.btn-tarjeta:hover {
+    color: #FFD369;
+}
+
+.btn-tarjeta:hover .circulo-flecha  {
+    transform: translateX(2px);
+    background-color: #FFD369;
 }
 
 /*
@@ -454,7 +551,7 @@ seccion de tarjetas DJ(servicios-dj.html)
 }
 
 /*
-9. 
+8. 
 Footer del sitio
 */
 
@@ -463,31 +560,36 @@ Footer del sitio
     color: #EEEEEE;
     font-family: Arial, sans-serif;
     border-top: 2px solid #FFD369;
-    padding-top: 20px;
+    padding-top: 30px;
 }
 
 .footer-container {
-    max-width: 100%;
+    max-width: 1100px;
     margin: 0 auto;
     display: grid;
-    padding: 0px 30px 20px 30px;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 60px;
+    padding: 0px 30px 30px 30px;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 50px;
+    justify-content: center;
+    align-items: center;
 }
 
 .footer-columna {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .caja-de-marca {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
 }
 
 .titulo-marca {
-    font-size: 0.90rem;
+    font-size: 1rem;
     font-weight: bolder;
     letter-spacing: 0.5px;
     text-transform: uppercase;
@@ -495,11 +597,11 @@ Footer del sitio
 }
 
 .footer-contacto-y-ubicacion {
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     font-weight: bold;
     letter-spacing: 1px;
-    margin-top: 12px;
-    margin-bottom: 12px;
+    margin-top: 0;
+    margin-bottom: 15px;
     text-transform: uppercase;
     border-bottom: 1px solid #FFD369;
     padding-bottom: 4px;
@@ -508,12 +610,11 @@ Footer del sitio
 }
 
 .footer-texto {
-    font-size: 0.78rem;
+    font-size: 0.85rem;
     color: #EEEEEE;
     line-height: 1.5;
-    margin: 10px;
+    margin-top: 8px;
     text-align: center;
-    margin-top: -15px;
 }
 
 .footer-list {
@@ -522,14 +623,16 @@ Footer del sitio
     margin: 0;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
+    align-items: center;
 }
 
 .contacto-item {
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
-    font-size: 0.70rem;
+    font-size: 0.8rem;
     color: #EEEEEE;
 }
 
@@ -538,6 +641,7 @@ Footer del sitio
     text-decoration: none;
     display: flex;
     align-items: center;
+    justify-content: center;
     gap: 10px;
     transition: color 0.2s ease;
 }
@@ -547,8 +651,8 @@ Footer del sitio
 }
 
 .caja-logo, .caja-icon {
-    width: 25px;
-    height: 25px;
+    width: 24px;
+    height: 24px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -556,8 +660,8 @@ Footer del sitio
 }
 
 .caja-logo-footer {
-    width: 128px;
-    height: 128px;
+    width: 100px;
+    height: 100px;
     flex-shrink: 0;
 }
 
@@ -575,7 +679,7 @@ Footer del sitio
 }
 
 .footer-icon-argentina {
-    width: 20px;
+    width: 18px;
     height: auto;
     display: block;
 }
@@ -583,7 +687,7 @@ Footer del sitio
 .footer-bottom {
     background-color: #1a1e24;
     text-align: center;
-    padding: 10px;
+    padding: 12px;
     font-size: 0.75rem;
     color: #EEEEEE;
     letter-spacing: 0.50px;
