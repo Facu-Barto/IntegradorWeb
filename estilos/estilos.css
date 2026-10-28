@@ -692,3 +692,96 @@ Footer del sitio
     color: #EEEEEE;
     letter-spacing: 0.50px;
 }
+.section-contacto form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.section-contacto{
+    width: 500px;
+    height: auto;
+    background-color: rgba(0, 0, 0, 0.3);
+    margin: 0 auto;
+    margin-top: 50px;
+    margin-bottom: 100px;
+    padding: 20px;
+    border: 2px solid #FFD369;
+    border-radius: 8px;
+}
+.section-contacto h2, p{
+    text-align: center;
+    color: white;
+   
+}
+.section-contacto h2{
+    text-shadow: -1px -1px 20px #FFD369;
+}
+.section-contacto p{
+    color: darkgray;
+    margin-top: 8px;
+}
+.section-contacto hr{
+    height: 2px;
+    background-color: #FFD369;
+    width: 100%;
+    margin-top: 3px;
+    margin-bottom: 20px;
+}
+.campo{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 25px;
+}
+.campo input, .campo select, .campo textarea{
+    font-family: inherit;
+    font-size: 15px;
+    border: 2px solid #ffffffbb;
+    border-radius: 8px;
+    background-color: #ffffffbb;
+    color: #333333;
+
+    transition: all 0.3s ease;
+    outline: none;
+    cursor: pointer;
+
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+}
+
+.campo label{
+    color: rgba(255, 255, 255, 0.858);
+    margin-bottom: 5px;
+}
+.campo select{
+    margin-left: 70px;
+    width: 270px;
+    height: 30px;
+}
+.campo select:hover{
+    border-color: #FFD369;
+}
+.campo textarea{
+   height: 70px;
+   width: 200px;
+    margin-top:8px;
+}
+form button{
+    height: 45px;
+    width: 75px;
+    padding: auto;
+    font-family: inherit;
+    font-size: 14px;
+    font-weight:bold;
+    color: #FFD369;
+
+    background-color: black;
+    border: 2px solid #FFD369;
+    border-radius: 8px;
+    
+}
+form button:hover{
+    box-shadow:-1px -1px 20px #FFD369 ;
+}

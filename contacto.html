@@ -29,7 +29,43 @@
     </header>
 
 </body>
+<section class="section-contacto">
+    <h2>Contacto</h2>
+    <p>Deja tus datos y nos pondremos en contacto en la brevedad</p>
+    <hr>
+    <form action="https://formspree.io/f/xrppkwrl" method="post">
+        <div class="campo">
+            <label for="nombre">Nombre Completo:</label>
+            <input type="text" id="nombre" name="nombre" required placeholder="Ej. Juan Perez">
+        </div>
+        <div class="campo">
+            <label for="correo">Correo electronico: </label>
+            <input type="email" name="_replyto" required placeholder="tucorreo@gmail.com">
+        </div>
+        <div class="campo">
+            <label for="Telefono">Telefono / WhatsApp:</label>
+            <input type="tel" id="telefono" name="telefono" required placeholder="Ej. 2657112233">
+        </div>
+        <div class="campo">
+            <label for="Servicio" id="servi">El servicio que desea: </label>
+            <select name="sevicio" id="servicio-">
+                <option value="reparacio">Reparacion / Mantenimiento de equipos</option>
+                <option value="DJ/sonido/iluminacion">DJ/ Sonido/ Iluminacion</option>
+                <option value="Sonido/iluminacion">Sonido/ Iluminacion</option>
+                <option value="sonido">Sonido</option>
+                <option value="Dj">DJ</option>
+                <option value="otro">Otra consulta</option>
+            </select>
+        </div>
+        <div class="campo" id="campo">
+            <label for="detalle" id="detalles" >Detalles que desea agregar: </label>
+            <textarea id="detalles" name="detalles"></textarea>
+        </div>
 
+        <button type="submit">Enviar</button>
+
+    </form>
+</section>
 <!--Footer del documento.-->
 <footer class="footer-del-sitio">
     <div class="footer-container">
