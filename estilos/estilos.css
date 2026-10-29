@@ -451,34 +451,40 @@ Seccion de servicios
 7. 
 seccion de tarjetas DJ(servicios-dj.html)
 */
+/*
+==================================================
+7. SECCIÓN DE TARJETAS DJ (servicios-dj.html) - CORREGIDO
+==================================================
+*/
 
 .subtitu {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 70px;
-    width: 750px;    
-    margin: 20px auto;
-    margin-bottom: 0;
-    box-shadow: 0px 0px 10px #393E46;
-    border-radius: 10px;
+    height: 75px;
+    width: 100%;
+    max-width: 750px;    
+    margin: 30px auto;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    border: 1px solid #393E46;
+    border-radius: 12px;
     background-color: #222831;
-    padding: 0;
+    padding: 0 20px;
 }
 
 .subtitu h3 {
-    font-size: 20px;
+    font-size: 1.2rem;
+    font-weight: 800;
     text-align: center;   
     color: #EEEEEE;
-    padding: 0;
-    margin-right: 490px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin: 0 auto;
 }
 
 .subtitu img {
-    opacity: 80%;
-    margin-left: 0;
-    padding: 0;
-    width: 87px;
+    opacity: 0.9;
+    width: 60px;
     height: auto;
 }
 
@@ -486,27 +492,31 @@ seccion de tarjetas DJ(servicios-dj.html)
     display: flex;
     justify-content: center;
     gap: 30px;
-    margin-top: 0;
+    flex-wrap: wrap;
+    margin-top: 20px;
 }
 
 .tarjetadj {
-    width: 400px;
-    height: 500px;
-    border-radius: 15px;
+    width: 380px;
+    height: 520px;
+    border-radius: 16px;
     background-size: cover;
     background-position: center;
     display: flex;
-    align-items: flex-start;
-    padding: 15px;
+    flex-direction: column;
+    justify-content: flex-end;
     box-sizing: border-box;
     position: relative;
     overflow: hidden;
-    transition: transform 0.3s ease;
+    border: 1px solid #393E46;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .tarjetadj:hover {
-    transform: translateY(-10px);
-    box-shadow: 0px 0px 15px #393E46;
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(255, 211, 105, 0.2);
+    border-color: #FFD369;
 }
 
 .djnano {
@@ -517,50 +527,120 @@ seccion de tarjetas DJ(servicios-dj.html)
     background-image: url('../img/imgyani.jpg');
 }
 
+.tarjeta-overlay-dj {
+    background: linear-gradient(180deg, rgba(34, 40, 49, 0.4) 0%, rgba(34, 40, 49, 0.95) 75%);
+    width: 100%;
+    height: 100%;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    position: relative; /* Clave para el posicionamiento absoluto interno */
+}
+
 .tarjetadj .contenido h4 {
     text-align: left;
     color: #EEEEEE;
-    text-shadow: 4px 4px 3px #222831;
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    margin: 0 0 4px 0;
+}
+
+
+/* 1. Biografía Estática (Visible por defecto) */
+.dj-bio-estatica {
+    background-color: rgba(34, 40, 49, 0.85);
+    padding: 15px;
+    border-radius: 8px;
+    border-left: 4px solid #FFD369;
+    margin-top: auto; /* Empuja el texto hacia la parte inferior sin romper el flujo */
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.dj-bio-estatica p {
+    font-size: 0.93rem;
+    color: #EEEEEE;
+    line-height: 1.5;
+    margin: 0;
+    text-align: left;
+}
+
+/* Al hacer hover, la biografía se desvanece */
+.tarjetadj:hover .dj-bio-estatica {
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+}
+
+/* 2. Panel de Contactos (Posicionado sobre la parte inferior de la tarjeta) */
+.info {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    right: 20px;
+    pointer-events: none;
 }
 
 .listainfo {
     opacity: 0;
-    overflow: hidden;
-    transition: max-height 0.4s ease, opacity 0.4s ease;
-    margin-top: 0;
+    transform: translateY(20px);
+    max-height: 320px;
+    overflow-y: auto;
+    transition: all 0.4s ease;
 }
 
-.listainfo li a {
-    color: #EEEEEE;
-}  
+/* Al hacer hover, los contactos suben y se hacen visibles */
+.tarjetadj:hover .info {
+    pointer-events: auto;
+}
 
 .tarjetadj:hover .listainfo {
-    max-height: 150px;
     opacity: 1;
-    margin-top: 15px;
-    color: #EEEEEE;
+    transform: translateY(0);
 }
 
-.listainfo:hover {
-    margin-top: 5px;
-    margin-left: 25px;
+.titulo-contacto-hover {
+    color: #FFD369;
+    font-size: 0.75rem;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 8px;
+    text-align: left;
 }
 
-.listainfo ul {
-    transform: translateY(-5px); 
+.dj-redes-lista {
     list-style: none;
     padding: 0;
     margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
 }
 
-.listainfo li {
+.dj-redes-lista li {
     display: flex;
     align-items: center;
-    gap: 5px;
-    margin: 5px 0;
-    font-size: 16px;
-    border-radius: 5px;
-    margin-left: 35px;
+    gap: 10px;
+    font-size: 0.85rem;
+    background-color: rgba(22, 26, 32, 0.95);
+    padding: 10px 12px;
+    border-radius: 8px;
+    border: 1px solid #393E46;
+}
+
+.dj-redes-lista li a {
+    color: #EEEEEE;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}  
+
+.dj-redes-lista li a:hover {
+    color: #FFD369;
 }
 
 .iconoig {
@@ -568,7 +648,6 @@ seccion de tarjetas DJ(servicios-dj.html)
     height: 18px;
     object-fit: contain;
 }
-
 /*
 8. 
 Pagina servicio de sonido
@@ -919,99 +998,233 @@ Footer del sitio
     letter-spacing: 0.50px;
 }
 
-/*
-.
-Seccion Contacto
-*/
-.section-contacto form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+/* ==================================================
+   SECCIÓN CONTACTO Y REQUERIMIENTOS (2 Columnas: Form izq / Requerimientos der)
+   ================================================== */
+
+.seccion-contacto-completa {
+    max-width: 1200px;
+    width: 100%;
+    margin: 30px auto;
+    padding: 0 20px;
 }
-.section-contacto{
-    width: 500px;
-    height: auto;
-    background-color: rgba(0, 0, 0, 0.3);
-    margin: 0 auto;
-    margin-top: 50px;
-    margin-bottom: 100px;
-    padding: 20px;
-    border: 2px solid #FFD369;
-    border-radius: 8px;
+
+.seccion-header-contacto {
+    margin-bottom: 30px;
 }
-.section-contacto h2, p{
-    text-align: center;
-    color: white;   
+
+.etiqueta-contacto-top {
+    color: #FFD369;
+    font-size: 0.8rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    display: block;
+    margin-bottom: 8px;
 }
-.section-contacto h2{
-    text-shadow: -1px -1px 20px #FFD369;
+
+.seccion-header-contacto h2 {
+    color: #EEEEEE;
+    font-size: 2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+    text-align: left;
 }
-.section-contacto p{
-    color: darkgray;
-    margin-top: 8px;
+
+.seccion-header-contacto p {
+    color: #DDDDDD;
+    font-size: 0.95rem;
+    text-align: left;
+    margin-bottom: 15px;
 }
-.section-contacto hr{
+
+.seccion-header-contacto hr {
+    border: none;
     height: 2px;
     background-color: #FFD369;
     width: 100%;
-    margin-top: 3px;
-    margin-bottom: 20px;
 }
-.campo{
+
+/* Grilla principal: Formulario a la izquierda (más ancho) y Requerimientos a la derecha */
+.contenedor-dos-columnas-layout {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 35px;
+    align-items: start;
+}
+
+/* Caja principal del formulario */
+.caja-formulario-principal {
+    width: 100%;
+    background-color: rgba(34, 40, 49, 0.85);
+    border: 2px solid #FFD369;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.caja-formulario-principal form {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    margin-bottom: 25px;
+    gap: 20px;
 }
-.campo input, .campo select, .campo textarea{
-    font-family: inherit;
-    font-size: 15px;
-    border: 2px solid #ffffffbb;
-    border-radius: 8px;
-    background-color: #ffffffbb;
-    color: #333333;
 
+/* Grilla interna de dos columnas para los campos del formulario */
+.form-grid-dos-columnas {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    width: 100%;
+}
+
+.caja-formulario-principal .campo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    text-align: left;
+    width: 100%;
+}
+
+.caja-formulario-principal .campo-full {
+    grid-column: span 2;
+}
+
+.caja-formulario-principal .campo label {
+    color: #EEEEEE;
+    font-size: 0.75rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.caja-formulario-principal .campo input,
+.caja-formulario-principal .campo select,
+.caja-formulario-principal .campo textarea {
+    font-family: inherit;
+    font-size: 0.9rem;
+    border: 1px solid #393E46;
+    border-radius: 8px;
+    background-color: #393E46;
+    color: #EEEEEE;
+    padding: 12px 15px;
+    width: 100%;
+    box-sizing: border-box;
     transition: all 0.3s ease;
     outline: none;
-    cursor: pointer;
-
-    appearance: none;
-    -webkit-appearance: none;
-    -moz-appearance: none;
 }
 
-.campo label{
-    color: rgba(255, 255, 255, 0.858);
-    margin-bottom: 5px;
+.caja-formulario-principal .campo input::placeholder,
+.caja-formulario-principal .campo textarea::placeholder {
+    color: #AAAAAA;
 }
-.campo select{
-    margin-left: 70px;
-    width: 270px;
-    height: 30px;
-}
-.campo select:hover{
+
+.caja-formulario-principal .campo input:focus,
+.caja-formulario-principal .campo select:focus,
+.caja-formulario-principal .campo textarea:focus {
     border-color: #FFD369;
+    box-shadow: 0 0 10px rgba(255, 211, 105, 0.3);
 }
-.campo textarea{
-    height: 70px;
-    width: 200px;
-    margin-top:8px;
-}
-form button{
-    height: 45px;
-    width: 75px;
-    padding: auto;
-    font-family: inherit;
-    font-size: 14px;
-    font-weight:bold;
-    color: #FFD369;
 
-    background-color: black;
-    border: 2px solid #FFD369;
-    border-radius: 8px;
-    
+.caja-formulario-principal .campo textarea {
+    height: 100px;
+    resize: vertical;
 }
-form button:hover{
-    box-shadow:-1px -1px 20px #FFD369 ;
+
+/* Botón de envío que cruza todo el ancho */
+.caja-formulario-principal .btn-enviar-contacto {
+    width: 100%;
+    height: 48px;
+    font-family: inherit;
+    font-size: 0.95rem;
+    font-weight: bold;
+    color: #222831;
+    background: linear-gradient(90deg, #FF7E5F 0%, #FFD369 100%);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.caja-formulario-principal .btn-enviar-contacto:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 211, 105, 0.4);
+}
+
+/* Tarjeta Lateral de Requerimientos a la derecha */
+.caja-requerimientos-lateral {
+    background-color: rgba(34, 40, 49, 0.95);
+    border: 2px solid #393E46;
+    border-radius: 12px;
+    padding: 30px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+    display: flex;
+    flex-direction: column;
+}
+
+.caja-requerimientos-lateral h3 {
+    color: #EEEEEE;
+    font-size: 1.2rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+    text-align: left;
+}
+
+.sub-req {
+    color: #CCCCCC;
+    font-size: 0.85rem;
+    margin-bottom: 20px;
+    text-align: left;
+    line-height: 1.4;
+}
+
+.lista-requerimientos-lateral {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.lista-requerimientos-lateral li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    color: #EEEEEE;
+    font-size: 0.85rem;
+    line-height: 1.4;
+    text-align: left;
+    border-bottom: 1px solid #393E46;
+    padding-bottom: 12px;
+}
+
+.lista-requerimientos-lateral li:last-child {
+    border-bottom: none;
+    padding-bottom: 0;
+}
+
+.punto-accent {
+    color: #FFD369;
+    font-weight: bold;
+    font-size: 1.1rem;
+    line-height: 1;
+}
+
+/* Responsive para dispositivos móviles */
+@media (max-width: 900px) {
+    .contenedor-dos-columnas-layout {
+        grid-template-columns: 1fr;
+    }
+    .form-grid-dos-columnas {
+        grid-template-columns: 1fr;
+    }
+    .campo-full {
+        grid-column: span 1;
+    }
 }

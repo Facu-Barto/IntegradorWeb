@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -28,96 +29,156 @@
         </nav>
     </header>
 
-</body>
-<section class="section-contacto">
-    <h2>Contacto</h2>
-    <p>Deja tus datos y nos pondremos en contacto en la brevedad</p>
-    <hr>
-    <form action="https://formspree.io/f/xrppkwrl" method="post">
-        <div class="campo">
-            <label for="nombre">Nombre Completo:</label>
-            <input type="text" id="nombre" name="nombre" required placeholder="Ej. Juan Perez">
-        </div>
-        <div class="campo">
-            <label for="correo">Correo electronico: </label>
-            <input type="email" name="_replyto" required placeholder="tucorreo@gmail.com">
-        </div>
-        <div class="campo">
-            <label for="Telefono">Telefono / WhatsApp:</label>
-            <input type="tel" id="telefono" name="telefono" required placeholder="Ej. 2657112233">
-        </div>
-        <div class="campo">
-            <label for="Servicio" id="servi">El servicio que desea: </label>
-            <select name="sevicio" id="servicio-">
-                <option value="reparacio">Reparacion / Mantenimiento de equipos</option>
-                <option value="DJ/sonido/iluminacion">DJ/ Sonido/ Iluminacion</option>
-                <option value="Sonido/iluminacion">Sonido/ Iluminacion</option>
-                <option value="sonido">Sonido</option>
-                <option value="Dj">DJ</option>
-                <option value="otro">Otra consulta</option>
-            </select>
-        </div>
-        <div class="campo" id="campo">
-            <label for="detalle" id="detalles" >Detalles que desea agregar: </label>
-            <textarea id="detalles" name="detalles"></textarea>
-        </div>
-
-        <button type="submit">Enviar</button>
-
-    </form>
-</section>
-
-<!--Footer del documento.-->
-<footer class="footer-del-sitio">
-    <div class="footer-container">
-        <!--Columna 1 de footer: logo y marca-->
-        <div class="footer-columna">
-            <div class="caja-de-marca">
-                <div class="caja-logo-footer">
-                    <img src="img/logoSolo.png" alt="Logo De Sonido Montañez Medina" id="logo-footer">
-                </div>
-                <h3 class="titulo-marca">Sonido Montañez Medina</h3>
+   <main>
+        <section class="seccion-contacto-completa">
+            <div class="seccion-header-contacto">
+                <span class="etiqueta-contacto-top">CONTACTO</span>
+                <h2>Contanos tu evento</h2>
+                <p>Completá el formulario o escribinos directamente. Te respondemos con disponibilidad y una propuesta técnica personalizada.</p>
+                <hr>
             </div>
-            <span class="footer-texto">Sonido e iluminación profesional</span>
-        </div>
 
-        <!--Columna 2 de footer: Contacto y Ubicación-->
-        <div class="footer-columna">
-            <h4 class="footer-contacto-y-ubicacion">Contacto & Ubicación</h4>
-            <ul class="footer-list">
-                <!--Ubicacion-->
-                <li class="contacto-item">
-                    <div class="caja-icon">
-                        <img src="img/Iconos/UbicacionIcon.png" alt="Ubicación" class="footer-icon" >
+            <div class="contenedor-dos-columnas-layout">
+                
+                <!-- Columna Izquierda: Formulario de Contacto (en dos columnas internas) -->
+                <div class="caja-formulario-principal">
+                    <form action="https://formspree.io/f/xrppkwrl" method="post">
+                        <div class="form-grid-dos-columnas">
+                            
+                            <!-- Nombre y Apellido -->
+                            <div class="campo">
+                                <label for="nombre">NOMBRE Y APELLIDO *</label>
+                                <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
+                            </div>
+
+                            <!-- Mail -->
+                            <div class="campo">
+                                <label for="correo">EMAIL *</label>
+                                <input type="email" id="correo" name="_replyto" required placeholder="tu@email.com">
+                            </div>
+
+                            <!-- Teléfono -->
+                            <div class="campo">
+                                <label for="telefono">TELÉFONO *</label>
+                                <input type="tel" id="telefono" name="telefono" required placeholder="Ej. 2657112233">
+                            </div>
+
+                            <!-- Tipo de evento -->
+                            <div class="campo">
+                                <label for="servicio">TIPO DE EVENTO *</label>
+                                <select id="servicio" name="tipo_evento" required>
+                                    <option value="" disabled selected>Seleccioná el tipo de evento</option>
+                                    <option value="Evento Intimo">Evento Íntimo (Aprox. 200 m²)</option>
+                                    <option value="Evento Mediano">Evento Mediano (Aprox. 900 m²)</option>
+                                    <option value="Evento Grande">Evento Grande (Más de 900 m²)</option>
+                                    <option value="Servicio DJ">Servicio DJ</option>
+                                    <option value="Otro">Otro tipo de evento</option>
+                                </select>
+                            </div>
+
+                            <!-- Fecha estimada -->
+                            <div class="campo campo-full">
+                                <label for="fecha">FECHA ESTIMADA *</label>
+                                <input type="text" id="fecha" name="fecha_estimada" required placeholder="dd/mm/aaaa">
+                            </div>
+
+                            <!-- Descripción del requerimiento -->
+                            <div class="campo campo-full">
+                                <label for="detalles">DESCRIPCIÓN DEL REQUERIMIENTO</label>
+                                <textarea id="detalles" name="descripcion" placeholder="Contanos el espacio, el aforo estimado y qué servicios necesitás..."></textarea>
+                            </div>
+
+                        </div>
+
+                        <button type="submit" class="btn-enviar-contacto">ENVIAR CONSULTA →</button>
+                    </form>
+                </div>
+
+                <!-- Columna Derecha: Tarjeta de Requerimientos y Condiciones -->
+                <div class="caja-requerimientos-lateral">
+                    <h3>Condiciones del Servicio</h3>
+                    <p class="sub-req">Para garantizar un trabajo profesional y de calidad, es necesario cumplir con las siguientes pautas:</p>
+                    
+                    <ul class="lista-requerimientos-lateral">
+                        <li>
+                            <span class="punto-accent">▸</span>
+                            <div><strong>Ser mayor de edad</strong> para realizar la contratación formal.</div>
+                        </li>
+                        <li>
+                            <span class="punto-accent">▸</span>
+                            <div><strong>Reserva de fecha:</strong> Con al menos 3 días de anticipación y seña del 50%.</div>
+                        </li>
+                        <li>
+                            <span class="punto-accent">▸</span>
+                            <div><strong>Montaje previo:</strong> Disponer del lugar con 3 horas de anticipación.</div>
+                        </li>
+                        <li>
+                            <span class="punto-accent">▸</span>
+                            <div><strong>Retiro de equipos:</strong> 2 horas luego de terminado el evento.</div>
+                        </li>
+                        <li>
+                            <span class="punto-accent">▸</span>
+                            <div><strong>Catering:</strong> Informar si se incluirá o no catering para los técnicos.</div>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
+        </section>
+    </main>
+    <!--Footer del documento.-->
+    <footer class="footer-del-sitio">
+        <div class="footer-container">
+            <!--Columna 1 de footer: logo y marca-->
+            <div class="footer-columna">
+                <div class="caja-de-marca">
+                    <div class="caja-logo-footer">
+                        <img src="img/logoSolo.png" alt="Logo De Sonido Montañez Medina" id="logo-footer">
                     </div>
-                    <span>Villa Mercedes, San Luis, Argentina</span>
-                    <img src="img/Iconos/ArgentinaIcon.png" alt="Bandera Argentina" class="footer-icon-argentina">
-                </li>
-                <!--Instagram-->
-                <li class="contacto-item">
-                    <a href="https://www.instagram.com/montanez.medina.sonido/" target="_blank" rel="noopener">
+                    <h3 class="titulo-marca">Sonido Montañez Medina</h3>
+                </div>
+                <span class="footer-texto">Sonido e iluminación profesional</span>
+            </div>
+
+            <!--Columna 2 de footer: Contacto y Ubicación-->
+            <div class="footer-columna">
+                <h4 class="footer-contacto-y-ubicacion">Contacto & Ubicación</h4>
+                <ul class="footer-list">
+                    <!--Ubicacion-->
+                    <li class="contacto-item">
                         <div class="caja-icon">
-                            <img src="img/Iconos/igIcon.png" alt="Instagram" class="footer-icon">
+                            <img src="img/Iconos/UbicacionIcon.png" alt="Ubicación" class="footer-icon">
                         </div>
-                        <span>montanez.medina.sonido</span>
-                    </a>
-                </li>
-                <!--WhatsApp-->
-                <li class="contacto-item">
-                    <a href="https://api.whatsapp.com/send/?phone=2657217327&text&type=phone_number&app_absent=0" target="_blank" rel="noopener">
-                        <div class="caja-icon">
-                            <img src="img/Iconos/WhatsappIcon.png" alt="WhatsApp" class="footer-icon">
-                        </div>
-                        <span>+54 9 2657 21 7327</span>
-                    </a>
-                </li>
-            </ul>
+                        <span>Villa Mercedes, San Luis, Argentina</span>
+                        <img src="img/Iconos/ArgentinaIcon.png" alt="Bandera Argentina" class="footer-icon-argentina">
+                    </li>
+                    <!--Instagram-->
+                    <li class="contacto-item">
+                        <a href="https://www.instagram.com/montanez.medina.sonido/" target="_blank" rel="noopener">
+                            <div class="caja-icon">
+                                <img src="img/Iconos/igIcon.png" alt="Instagram" class="footer-icon">
+                            </div>
+                            <span>montanez.medina.sonido</span>
+                        </a>
+                    </li>
+                    <!--WhatsApp-->
+                    <li class="contacto-item">
+                        <a href="https://api.whatsapp.com/send/?phone=2657217327&text&type=phone_number&app_absent=0"
+                            target="_blank" rel="noopener">
+                            <div class="caja-icon">
+                                <img src="img/Iconos/WhatsappIcon.png" alt="WhatsApp" class="footer-icon">
+                            </div>
+                            <span>+54 9 2657 21 7327</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </div>
-    </div>
-    <!--Seccion de copyright-->
-    <div class="footer-bottom">
-        <p>© 2026 Sonido Montañez Medina. Todos los derechos reservados.</p>
-    </div>
-</footer>
+        <!--Seccion de copyright-->
+        <div class="footer-bottom">
+            <p>© 2026 Sonido Montañez Medina. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+</body>
 
 </html>
