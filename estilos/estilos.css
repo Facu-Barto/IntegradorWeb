@@ -571,6 +571,214 @@ seccion de tarjetas DJ(servicios-dj.html)
 
 /*
 8. 
+Pagina servicio de sonido
+*/
+
+.seccion-bienvenida-sonido {
+    max-width: 900px;
+    margin: 0 auto 35px auto;
+    width: 100%;
+}
+
+.tarjeta-bievenida {
+    background-color: rgba(57, 62, 70, 0.5);
+    border: 1px solid #393E46;
+    border-left: 5px solid #FFD369;
+    border-radius: 12px;
+    padding: 25px 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+}
+
+.tarjeta-bievenida h3 {
+    color: #FFD369;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    text-align: left;
+}
+
+.tarjeta-bievenida p {
+    color: #DDDDDD;
+    font-size: 0.93rem;
+    line-height: 1.5;
+    text-align: left;
+    margin: 0;
+}
+
+.contenedor-columnas {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.seccion-controladores .contenedor-columnas {
+    max-width: 900px;
+    margin: 0 auto 40px auto;
+}
+
+.tarjeta-principal {
+    background-color: rgba(57, 62, 70, 0.5);
+    border: 1px solid #393E46;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 900px;
+    height: 320px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-principal:hover {
+    transform: translateY(-5px);
+    border-color: #FFD369;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    background-color: rgba(57, 62, 70, 0.95);
+}
+
+.tarjeta-principal .tarjeta-imagen {
+    width: 50%;
+    height: 100%;
+    background-color: #222831;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.tarjeta-principal .tarjeta-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.tarjeta-principal:hover .tarjeta-imagen img {
+    transform: scale(1.05);
+}
+
+.tarjeta-principal .tarjeta-contenido-info {
+    width: 50%;
+    height: 100%;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.tarjeta-servicio {
+    background-color: rgba(57, 62, 70, 0.5);
+    border: 1px solid #393E46;
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 300px;
+    max-width: 360px;
+    height: 520px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-servicio:hover {
+    transform: translateY(-5px);
+    border-color: #FFD369;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+    background-color: rgba(57, 62, 70, 0.95);
+}
+
+.tarjeta-servicio .tarjeta-imagen {
+    width: 100%;
+    height: 200px;
+    background-color: #222831;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.tarjeta-servicio .tarjeta-imagen img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.tarjeta-servicio:hover .tarjeta-imagen img {
+    transform: scale(1.05);
+}
+
+.tarjeta-servicio .tarjeta-contenido-info {
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    flex-grow: 1;
+}
+
+.tarjeta-contenido-info h3 {
+    color: #EEEEEE;
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 5px;
+    margin-bottom: 12px;
+    text-align: left;
+}
+
+.lista-ejemplos-evento {
+    margin-top: 5px;
+    width: 100%;
+    list-style: none;
+    padding: 0;
+}
+
+.lista-ejemplos-evento li {
+    font-size: 0.88rem;
+    color: #DDDDDD;
+    line-height: 1.4;
+    margin-bottom: 6px;
+    position: relative;
+    padding-left: 18px;
+    text-align: left;
+}
+
+.lista-ejemplos-evento li::before {
+    content: "•";
+    color: #FFD369;
+    font-size: 1rem;
+    position: absolute;
+    left: 4px;
+    top: -1px;
+}
+
+@media (max-width: 768px) {
+    .tarjeta-principal {
+        flex-direction: column;
+        height: auto;
+        max-width: 360px;
+    }
+    .tarjeta-principal .tarjeta-imagen {
+        width: 100%;
+        height: 200px;
+    }
+    .tarjeta-principal .tarjeta-contenido-info {
+        width: 100%;
+        height: auto;
+        padding: 25px;
+    }
+    .tarjeta-servicio {
+        height: auto;
+        min-height: 480px;
+    }
+}
+
+/*
+9. 
 Footer del sitio
 */
 
