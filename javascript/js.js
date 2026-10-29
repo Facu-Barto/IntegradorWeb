@@ -1,16 +1,15 @@
 //Array con las imágenes y sus textos alt.
 const imagenes = [
-    { src: 'img/', alt: '' },
-    { src: 'img', alt: '' },
-    { src: 'img', alt: '' },
-    { src: 'img', alt: '' }
+    {src: 'img/Carrusel/Fiesta1.jpeg', alt: 'Fiesta en boliche con lasers'},
+    {src: 'img/Carrusel/Fiesta2.jpeg', alt: 'Fiesta en boliche con lasers'},
+    {src: 'img/Carrusel/Fiesta3.jpeg', alt: 'Fiesta en boliche con lasers'},
 ];
 
 //Variable para saber en que imagen estamos.
 let indiceActual = 0;
 
 //Referencias a los elementos del DOM
-const imgElemento = document.getElementById('imagen-carrusel');
+const imgElemento = document.getElementById('img-carrusel');
 const btnAnterior = document.getElementById('btn-carrusel-anterior');
 const btnSiguiente = document.getElementById('btn-carrusel-posterior');
 

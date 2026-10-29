@@ -20,9 +20,9 @@
 
         <nav class="menu">
             <ul>
-                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html" class="activo">Inicio</a></li>
                 <li><a href="servicios-dj.html">Servicio DJ</a></li>
-                <li><a href="servicios-sonido.html">Servicio de Sonido</a></li>
+                <li><a href="servicios-sonido.html">Servicio Sonido</a></li>
                 <li><a href="contacto.html">Contacto</a></li>
             </ul>
         </nav>
@@ -80,13 +80,17 @@
         </div>
 
         <div class="contenedor-carrusel">
-            <button id="btn-carrusel-anterior" aria-label="Imagen anterior"> ‹ </button>
-        
-            <div class="tarjeta-carrusel">
-                <img class="imagen-carrusel" src="" alt="">
+            <button id="btn-carrusel-anterior" aria-label="Imagen anterior"> 
+                <img src="img/Iconos/flechaCarrusel.png" alt="Anterior" class="icono-flecha-carrusel">
+            </button>
+            <div class="contenedor-tarjeta">
+                <div class="tarjeta-carrusel">
+                    <img id="img-carrusel" class="img-carrusel" src="" alt="">
+                </div>
             </div>
-        
-            <button id="btn-carrusel-posterior" aria-label="Siguiente imagen"> › </button>
+            <button id="btn-carrusel-posterior" aria-label="Siguiente imagen"> 
+                <img src="img/Iconos/flechaCarrusel.png" alt="Siguiente" class="icono-flecha-carrusel">
+            </button>
         </div>
     </section>
 
@@ -244,7 +248,7 @@
 <!--Footer del documento.-->
 <footer class="footer-del-sitio">
     <div class="footer-container">
-        <!--Columna 1 de footer: logo y marca-->
+<!--Columna 1 de footer: logo y marca-->
         <div class="footer-columna">
             <div class="caja-de-marca">
                 <div class="caja-logo-footer">
@@ -254,8 +258,7 @@
             </div>
             <span class="footer-texto">Sonido e iluminación profesional</span>
         </div>
-
-        <!--Columna 2 de footer: Contacto y Ubicación-->
+<!--Columna 2 de footer: Contacto y Ubicación-->
         <div class="footer-columna">
             <h4 class="footer-contacto-y-ubicacion">Contacto & Ubicación</h4>
             <ul class="footer-list">
@@ -288,7 +291,7 @@
             </ul>
         </div>
     </div>
-    <!--Seccion de copyright-->
+<!--Seccion de copyright-->
     <div class="footer-bottom">
         <p>© 2026 Sonido Montañez Medina. Todos los derechos reservados.</p>
     </div>
