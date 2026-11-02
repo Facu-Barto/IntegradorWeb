@@ -15,9 +15,19 @@ const btnSiguiente = document.getElementById('btn-carrusel-posterior');
 
 //Funcion para actualizar la imagen que se ve.
 function actualizarCarrusel() {
-    imgElemento.src = imagenes[indiceActual].src;
+    imgElemento.classList.add("fade-out");
+
+    setTimeout(()=> {
+    imgElemento.src= imagenes[indiceActual].src;
     imgElemento.alt = imagenes[indiceActual].alt;
+
+    imgElemento.classList.remove("fade-out");
+    }, 400);
 }
+
+    imgElemento.src = imagenes[indiceActual];
+    imgElemento.alt = "Imagen destacada del evento 1";
+
 
 //Evento Avanzar.
 btnSiguiente.addEventListener('click', () => {
