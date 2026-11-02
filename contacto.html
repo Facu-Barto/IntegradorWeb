@@ -29,22 +29,23 @@
         </nav>
     </header>
 
-   <main>
+    <main>
         <section class="seccion-contacto-completa">
             <div class="seccion-header-contacto">
                 <span class="etiqueta-contacto-top">CONTACTO</span>
                 <h2>Contanos tu evento</h2>
-                <p>Completá el formulario o escribinos directamente. Te respondemos con disponibilidad y una propuesta técnica personalizada.</p>
+                <p>Completá el formulario o escribinos directamente. Te respondemos con disponibilidad y una propuesta
+                    técnica personalizada.</p>
                 <hr>
             </div>
 
             <div class="contenedor-dos-columnas-layout">
-                
+
                 <!-- Columna Izquierda: Formulario de Contacto (en dos columnas internas) -->
                 <div class="caja-formulario-principal">
                     <form action="https://formspree.io/f/xrppkwrl" method="post">
                         <div class="form-grid-dos-columnas">
-                            
+
                             <!-- Nombre y Apellido -->
                             <div class="campo">
                                 <label for="nombre">NOMBRE Y APELLIDO *</label>
@@ -63,7 +64,7 @@
                                 <input type="tel" id="telefono" name="telefono" required placeholder="Ej. 2657112233">
                             </div>
 
-                            <!-- Tipo de evento -->
+                            <!--Tipo de evento-->
                             <div class="campo">
                                 <label for="servicio">TIPO DE EVENTO *</label>
                                 <select id="servicio" name="tipo_evento" required>
@@ -76,29 +77,29 @@
                                 </select>
                             </div>
 
-                            <!-- Fecha estimada -->
+                            <!--Fecha estimada-->
                             <div class="campo campo-full">
                                 <label for="fecha">FECHA ESTIMADA *</label>
                                 <input type="text" id="fecha" name="fecha_estimada" required placeholder="dd/mm/aaaa">
                             </div>
 
-                            <!-- Descripción del requerimiento -->
+                            <!--Descripción del requerimiento-->
                             <div class="campo campo-full">
                                 <label for="detalles">DESCRIPCIÓN DEL REQUERIMIENTO</label>
-                                <textarea id="detalles" name="descripcion" placeholder="Contanos el espacio, el aforo estimado y qué servicios necesitás..."></textarea>
+                                <textarea id="detalles" name="descripcion"
+                                    placeholder="Contanos el espacio, el aforo estimado y qué servicios necesitás..."></textarea>
                             </div>
-
                         </div>
-
                         <button type="submit" class="btn-enviar-contacto">ENVIAR CONSULTA →</button>
                     </form>
                 </div>
 
-                <!-- Columna Derecha: Tarjeta de Requerimientos y Condiciones -->
+                <!--Tarjeta de Requerimientos y Condiciones-->
                 <div class="caja-requerimientos-lateral">
                     <h3>Condiciones del Servicio</h3>
-                    <p class="sub-req">Para garantizar un trabajo profesional y de calidad, es necesario cumplir con las siguientes pautas:</p>
-                    
+                    <p class="sub-req">Para garantizar un trabajo profesional y de calidad, es necesario cumplir con las
+                        siguientes pautas:</p>
+
                     <ul class="lista-requerimientos-lateral">
                         <li>
                             <span class="punto-accent">▸</span>
@@ -106,7 +107,8 @@
                         </li>
                         <li>
                             <span class="punto-accent">▸</span>
-                            <div><strong>Reserva de fecha:</strong> Con al menos 3 días de anticipación y seña del 50%.</div>
+                            <div><strong>Reserva de fecha:</strong> Con al menos 3 días de anticipación y seña del 50%.
+                            </div>
                         </li>
                         <li>
                             <span class="punto-accent">▸</span>
@@ -114,15 +116,15 @@
                         </li>
                         <li>
                             <span class="punto-accent">▸</span>
-                            <div><strong>Retiro de equipos:</strong> 2 horas luego de terminado el evento.</div>
+                            <div><strong>Retiro de equipos:</strong> brindar 2 horas luego de la finalización del evento.</div>
                         </li>
                         <li>
                             <span class="punto-accent">▸</span>
-                            <div><strong>Catering:</strong> Informar si se incluirá o no catering para los técnicos.</div>
+                            <div><strong>Catering:</strong> Informar si se incluirá o no catering para los técnicos.
+                            </div>
                         </li>
                     </ul>
                 </div>
-
             </div>
         </section>
     </main>
@@ -179,6 +181,9 @@
             <p>© 2026 Sonido Montañez Medina. Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <!--Conexion con validacion de formularioo por java script.-->
+    <script src="javascript/formulario.js"></script>
 </body>
 
 </html>

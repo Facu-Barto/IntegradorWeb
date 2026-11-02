@@ -451,11 +451,6 @@ Seccion de servicios
 7. 
 seccion de tarjetas DJ(servicios-dj.html)
 */
-/*
-==================================================
-7. SECCIÓN DE TARJETAS DJ (servicios-dj.html) - CORREGIDO
-==================================================
-*/
 
 .subtitu {
     display: flex;
@@ -536,7 +531,7 @@ seccion de tarjetas DJ(servicios-dj.html)
     flex-direction: column;
     justify-content: space-between;
     box-sizing: border-box;
-    position: relative; /* Clave para el posicionamiento absoluto interno */
+    position: relative; /*Clave para el posicionamiento absoluto interno*/
 }
 
 .tarjetadj .contenido h4 {
@@ -549,7 +544,7 @@ seccion de tarjetas DJ(servicios-dj.html)
 }
 
 
-/* 1. Biografía Estática (Visible por defecto) */
+/*Biografía Estática*/
 .dj-bio-estatica {
     background-color: rgba(34, 40, 49, 0.85);
     padding: 15px;
@@ -567,14 +562,14 @@ seccion de tarjetas DJ(servicios-dj.html)
     text-align: left;
 }
 
-/* Al hacer hover, la biografía se desvanece */
+/*Al hacer hover, la biografía se desvanece*/
 .tarjetadj:hover .dj-bio-estatica {
     opacity: 0;
     transform: translateY(-10px);
     pointer-events: none;
 }
 
-/* 2. Panel de Contactos (Posicionado sobre la parte inferior de la tarjeta) */
+/*Panel de Contactos (Posicionado sobre la parte inferior de la tarjeta)*/
 .info {
     position: absolute;
     bottom: 20px;
@@ -591,7 +586,7 @@ seccion de tarjetas DJ(servicios-dj.html)
     transition: all 0.4s ease;
 }
 
-/* Al hacer hover, los contactos suben y se hacen visibles */
+/*Al hacer hover, los contactos suben y se hacen visibles*/
 .tarjetadj:hover .info {
     pointer-events: auto;
 }
@@ -648,6 +643,7 @@ seccion de tarjetas DJ(servicios-dj.html)
     height: 18px;
     object-fit: contain;
 }
+
 /*
 8. 
 Pagina servicio de sonido
@@ -998,9 +994,9 @@ Footer del sitio
     letter-spacing: 0.50px;
 }
 
-/* ==================================================
-   SECCIÓN CONTACTO Y REQUERIMIENTOS (2 Columnas: Form izq / Requerimientos der)
-   ================================================== */
+/*
+SECCIÓN CONTACTO Y REQUERIMIENTOS
+*/
 
 .seccion-contacto-completa {
     max-width: 1200px;
@@ -1046,7 +1042,7 @@ Footer del sitio
     width: 100%;
 }
 
-/* Grilla principal: Formulario a la izquierda (más ancho) y Requerimientos a la derecha */
+/*Grilla principal: Formulario a la izquierda (más ancho) y Requerimientos a la derecha*/
 .contenedor-dos-columnas-layout {
     display: grid;
     grid-template-columns: 1.5fr 1fr;
@@ -1054,7 +1050,7 @@ Footer del sitio
     align-items: start;
 }
 
-/* Caja principal del formulario */
+/*Caja principal del formulario*/
 .caja-formulario-principal {
     width: 100%;
     background-color: rgba(34, 40, 49, 0.85);
@@ -1070,7 +1066,7 @@ Footer del sitio
     gap: 20px;
 }
 
-/* Grilla interna de dos columnas para los campos del formulario */
+/*Grilla interna de dos columnas para los campos del formulario*/
 .form-grid-dos-columnas {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -1133,7 +1129,7 @@ Footer del sitio
     resize: vertical;
 }
 
-/* Botón de envío que cruza todo el ancho */
+/*Botón de envío que cruza todo el ancho*/
 .caja-formulario-principal .btn-enviar-contacto {
     width: 100%;
     height: 48px;
@@ -1155,7 +1151,7 @@ Footer del sitio
     box-shadow: 0 6px 20px rgba(255, 211, 105, 0.4);
 }
 
-/* Tarjeta Lateral de Requerimientos a la derecha */
+/*Tarjeta Lateral de Requerimientos a la derecha*/
 .caja-requerimientos-lateral {
     background-color: rgba(34, 40, 49, 0.95);
     border: 2px solid #393E46;
@@ -1227,4 +1223,47 @@ Footer del sitio
     .campo-full {
         grid-column: span 1;
     }
+}
+
+/*
+Formulario y validacion JS
+*/
+
+.input-error {
+    border-color: #ff5c5c !important;
+}
+
+/*Mensaje de error debajo de los campos*/
+.mensaje-error-dinamico {
+    color: #ff5c5c;
+    font-size: 0.85rem;
+    margin-top: 5px;
+}
+
+/*Tarjeta de éxito y resumen final*/
+.resumen-envio-exitoso {
+    background: #222831;
+    border: 2px solid #FFD369;
+    border-radius: 12px;
+    padding: 30px;
+    color: #EEEEEE;
+    text-align: left;
+}
+
+.resumen-envio-exitoso h3 {
+    color: #FFD369;
+    margin-bottom: 15px;
+}
+
+.resumen-envio-exitoso p {
+    margin-bottom: 20px;
+}
+
+.resumen-envio-exitoso ul {
+    list-style: none;
+    padding: 0;
+}
+
+.resumen-envio-exitoso li {
+    margin-bottom: 10px;
 }
