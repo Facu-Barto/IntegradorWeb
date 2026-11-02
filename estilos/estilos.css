@@ -746,6 +746,60 @@ Seccion de Nuestro Equipamiento
 }
 
 /*
+x.
+Seccion servicio tecnico
+*/
+
+.seccion-servicio-tecnico {
+    margin-top: 50px;
+    margin-bottom: 40px;
+    width: 100%;
+}
+
+.tarjeta-servicio-tecnico {
+    background-color: rgba(57, 62, 70, 0.8);
+    border: 1px solid #393E46;
+    border-left: 5px solid #FFD369; /* Detalle estético amarillo lateral */
+    border-radius: 12px;
+    padding: 35px;
+    max-width: 900px; /* Ancha, al igual que la tarjeta principal del inicio */
+    margin: 0 auto;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+    transition: transform 0.3s ease, border-color 0.3s ease, background-color 0.3s ease;
+    text-align: left;
+}
+
+.tarjeta-servicio-tecnico:hover {
+    transform: translateY(-3px);
+    border-color: #FFD369;
+    background-color: rgba(57, 62, 70, 0.95);
+}
+
+.contenido-tecnico h3 {
+    color: #EEEEEE;
+    font-size: 1.4rem;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.desc-tecnico {
+    color: #CCCCCC;
+    font-size: 0.93rem;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+.cta-tecnico {
+    margin-top: 25px;
+}
+
+@media (max-width: 768px) {
+    .tarjeta-servicio-tecnico {
+        padding: 25px 20px;
+    }
+}
+
+/*
 9. 
 Footer del sitio
 */
