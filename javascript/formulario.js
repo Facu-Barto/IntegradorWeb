@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const formulario = document.querySelector('.caja-formulario-principal form');
+    const formulario = document.querySelector('.contenedor-formulario form');
     
     // Referencias a los campos
     const inputNombre = document.getElementById('nombre');
@@ -151,7 +151,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Si todo es válido
         if (esValido) {
-            const contenedorFormulario = document.querySelector('.caja-formulario-principal');
+            const contenedorFormulario = document.querySelector('.contenedor-formulario');
             
             formulario.style.display = 'none';
 

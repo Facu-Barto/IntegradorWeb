@@ -4,22 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contacto</title>
+    <title>Nuestro Contacto</title>
+
+    <!--Enlaces a Logo del Title-->
+    <link rel="icon" type="image/png" href="img/logoSolo.png">
+
+    <!--Enlaces a Tipografias.-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    
     <!--Enlace a los estilos CSS.-->
-    <link rel="stylesheet" href="estilos/estilos.css">
+    <link rel="stylesheet" href="estilos/Estilos.css">
 </head>
 
-
-
 <body>
-    <!--Sección del Titulo y del menú de navegación.-->
-    <header class="header-principal">
-        <div class="caja-logo-header">
-            <img src="img/logoSolo.png" alt="Logo de Sonido Montañez Medina" id="logo-header">
-            <span class="nombre-marca">Sonido Montañez Medina</span>
+    <!--Sección del titulo y del menú.-->
+    <header class="header-pagina">
+        <div class="header-contenedor-logo">
+            <img src="img/logoSolo.png" alt="Logo de Sonido Montañez Medina" id="header-logo">
+            <h1 class="header-titulo">Sonido Montañez Medina</h1>
         </div>
 
-        <nav class="menu">
+        <nav class="header-menu">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="servicios-dj.html">Servicio DJ</a></li>
@@ -30,77 +37,70 @@
     </header>
 
     <main>
-        <section class="seccion-contacto-completa">
+        <section class="seccion-contacto">
             <div class="seccion-header-contacto">
-                <span class="etiqueta-contacto-top">CONTACTO</span>
+                <span>CONTACTO</span>
                 <h2>Contanos tu evento</h2>
                 <p>Completá el formulario o escribinos directamente. Te respondemos con disponibilidad y una propuesta
                     técnica personalizada.</p>
-                <hr>
             </div>
 
-            <div class="contenedor-dos-columnas-layout">
-
-                <!-- Columna Izquierda: Formulario de Contacto (en dos columnas internas) -->
-                <div class="caja-formulario-principal">
+            <div class="seccion-contacto-columnas">
+                <!--Formulario de Contacto-->
+                <div class="contenedor-formulario">
                     <form action="https://formspree.io/f/xrppkwrl" method="post">
-                        <div class="form-grid-dos-columnas">
 
-                            <!-- Nombre y Apellido -->
-                            <div class="campo">
-                                <label for="nombre">NOMBRE Y APELLIDO *</label>
-                                <input type="text" id="nombre" name="nombre" required placeholder="Tu nombre">
-                            </div>
-
-                            <!-- Mail -->
-                            <div class="campo">
-                                <label for="correo">EMAIL *</label>
-                                <input type="email" id="correo" name="_replyto" required placeholder="tu@email.com">
-                            </div>
-
-                            <!-- Teléfono -->
-                            <div class="campo">
-                                <label for="telefono">TELÉFONO *</label>
-                                <input type="tel" id="telefono" name="telefono" required placeholder="Ej. 2657112233">
-                            </div>
-
-                            <!--Tipo de evento-->
-                            <div class="campo">
-                                <label for="servicio">TIPO DE EVENTO *</label>
-                                <select id="servicio" name="tipo_evento" required>
-                                    <option value="" disabled selected>Seleccioná el tipo de evento</option>
-                                    <option value="Evento Intimo">Evento Íntimo (Aprox. 200 m²)</option>
-                                    <option value="Evento Mediano">Evento Mediano (Aprox. 900 m²)</option>
-                                    <option value="Evento Grande">Evento Grande (Más de 900 m²)</option>
-                                    <option value="Servicio DJ">Servicio DJ</option>
-                                    <option value="Otro">Otro tipo de evento</option>
-                                </select>
-                            </div>
-
-                            <!--Fecha estimada-->
-                            <div class="campo campo-full">
-                                <label for="fecha">FECHA ESTIMADA *</label>
-                                <input type="text" id="fecha" name="fecha_estimada" required placeholder="dd/mm/aaaa">
-                            </div>
-
-                            <!--Descripción del requerimiento-->
-                            <div class="campo campo-full">
-                                <label for="detalles">DESCRIPCIÓN DEL REQUERIMIENTO</label>
-                                <textarea id="detalles" name="descripcion"
-                                    placeholder="Contanos el espacio, el aforo estimado y qué servicios necesitás..."></textarea>
-                            </div>
+                        <div class="campo">
+                            <label for="nombre">NOMBRE Y APELLIDO *</label>
+                            <input type="text" id="nombre" name="nombre" required placeholder="Tu Nombre Y Apellido">
                         </div>
+
+                        <div class="campo">
+                            <label for="correo">EMAIL *</label>
+                            <input type="email" id="correo" name="_replyto" required placeholder="tu@email.com">
+                        </div>
+
+                        <div class="campo">
+                            <label for="telefono">TELÉFONO *</label>
+                            <input type="tel" id="telefono" name="telefono" required placeholder="Ej. 2657112233">
+                        </div>
+
+                        <div class="campo">
+                            <label for="servicio">TIPO DE EVENTO *</label>
+                            <select id="servicio" name="tipo_evento" required>
+                                <option value="" disabled selected>Seleccioná el tipo de evento</option>
+                                <option value="Evento Intimo">Evento Íntimo (Aprox. 200 m²)</option>
+                                <option value="Evento Mediano">Evento Mediano (Aprox. 900 m²)</option>
+                                <option value="Evento Grande">Evento Grande (Más de 900 m²)</option>
+                                <option value="Servicio DJ">Servicio DJ</option>
+                                <option value="Otro">Otro tipo de evento</option>
+                            </select>
+                        </div>
+
+                        <div class="campo">
+                            <label for="fecha">FECHA ESTIMADA *</label>
+                            <input type="text" id="fecha" name="fecha_estimada" required placeholder="dd/mm/aaaa">
+                        </div>
+
+                        <div class="campo">
+                            <label for="detalles">DESCRIPCIÓN DEL REQUERIMIENTO</label>
+                            <textarea id="detalles" name="descripcion"
+                                placeholder="Contanos el espacio, el aforo estimado y qué servicios necesitás..."></textarea>
+                        </div>
+
                         <button type="submit" class="btn-enviar-contacto">ENVIAR CONSULTA →</button>
                     </form>
                 </div>
 
                 <!--Tarjeta de Requerimientos y Condiciones-->
-                <div class="caja-requerimientos-lateral">
+                <div class="contenedor-requerimientos">
                     <h3>Condiciones del Servicio</h3>
-                    <p class="sub-req">Para garantizar un trabajo profesional y de calidad, es necesario cumplir con las
-                        siguientes pautas:</p>
+                    <p>
+                        Para garantizar un trabajo profesional y de calidad,
+                        es necesario cumplir con las siguientes pautas:
+                    </p>
 
-                    <ul class="lista-requerimientos-lateral">
+                    <ul class="lista-requerimientos">
                         <li>
                             <span class="punto-accent">▸</span>
                             <div><strong>Ser mayor de edad</strong> para realizar la contratación formal.</div>
@@ -129,25 +129,24 @@
             </div>
         </section>
     </main>
+
     <!--Footer del documento.-->
     <footer class="footer-del-sitio">
         <div class="footer-container">
-            <!--Columna 1 de footer: logo y marca-->
+            <!--Columna 1: Marca y Logo-->
             <div class="footer-columna">
-                <div class="caja-de-marca">
-                    <div class="caja-logo-footer">
-                        <img src="img/logoSolo.png" alt="Logo De Sonido Montañez Medina" id="logo-footer">
-                    </div>
-                    <h3 class="titulo-marca">Sonido Montañez Medina</h3>
+                <div class="caja-logo-footer">
+                    <img src="img/logoSolo.png" alt="Logo De Sonido Montañez Medina" id="logo-footer">
                 </div>
+                <h3 class="titulo-marca">Sonido Montañez Medina</h3>
                 <span class="footer-texto">Sonido e iluminación profesional</span>
             </div>
 
-            <!--Columna 2 de footer: Contacto y Ubicación-->
+            <!--Columna 2: Contacto y Ubicación-->
             <div class="footer-columna">
                 <h4 class="footer-contacto-y-ubicacion">Contacto & Ubicación</h4>
                 <ul class="footer-list">
-                    <!--Ubicacion-->
+                    <!-- Ubicación -->
                     <li class="contacto-item">
                         <div class="caja-icon">
                             <img src="img/Iconos/UbicacionIcon.png" alt="Ubicación" class="footer-icon">
@@ -155,7 +154,7 @@
                         <span>Villa Mercedes, San Luis, Argentina</span>
                         <img src="img/Iconos/ArgentinaIcon.png" alt="Bandera Argentina" class="footer-icon-argentina">
                     </li>
-                    <!--Instagram-->
+                    <!-- Instagram -->
                     <li class="contacto-item">
                         <a href="https://www.instagram.com/montanez.medina.sonido/" target="_blank" rel="noopener">
                             <div class="caja-icon">
@@ -164,7 +163,7 @@
                             <span>montanez.medina.sonido</span>
                         </a>
                     </li>
-                    <!--WhatsApp-->
+                    <!-- WhatsApp 1 -->
                     <li class="contacto-item">
                         <a href="https://api.whatsapp.com/send/?phone=2657217327&text&type=phone_number&app_absent=0"
                             target="_blank" rel="noopener">
@@ -174,7 +173,7 @@
                             <span>+54 9 2657 21 7327</span>
                         </a>
                     </li>
-                    <!--WhatsApp 2-->
+                    <!-- WhatsApp 2 -->
                     <li class="contacto-item">
                         <a href="https://api.whatsapp.com/send?phone=2657546590" target="_blank" rel="noopener">
                             <div class="caja-icon">
@@ -186,13 +185,14 @@
                 </ul>
             </div>
         </div>
-        <!--Seccion de copyright-->
+
+        <!-- Sección de copyright -->
         <div class="footer-bottom">
             <p>© 2026 Sonido Montañez Medina. Todos los derechos reservados.</p>
         </div>
     </footer>
 
-    <!--Conexion con validacion de formularioo por java script.-->
+    <!--Conexion con la validacion del formulario por java script-->
     <script src="javascript/formulario.js"></script>
 </body>
 

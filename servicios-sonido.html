@@ -4,20 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicios De Sonido</title>
-    <!--Enlace a los estilos CSS,-->
-    <link rel="stylesheet" href="estilos/estilos.css">
+    <title>Servicio De Sonido</title>
+
+    <!--Enlaces a Logo del Title-->
+    <link rel="icon" type="image/png" href="img/logoSolo.png">
+
+    <!--Enlaces a Tipografias.-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <!--Enlace a los estilos CSS.-->
+    <link rel="stylesheet" href="estilos/Estilos.css">
 </head>
 
 <body>
-    <!--Sección del Titulo y del menú de navegación.-->
-    <header class="header-principal">
-        <div class="caja-logo-header">
-            <img src="img/logoSolo.png" alt="Logo de Sonido Montañez Medina" id="logo-header">
-            <span class="nombre-marca">Sonido Montañez Medina</span>
+    <!--Sección del titulo y del menú.-->
+    <header class="header-pagina">
+        <div class="header-contenedor-logo">
+            <img src="img/logoSolo.png" alt="Logo de Sonido Montañez Medina" id="header-logo">
+            <span class="header-titulo">Sonido Montañez Medina</span>
         </div>
 
-        <nav class="menu">
+        <nav class="header-menu">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="servicios-dj.html">Servicio DJ</a></li>
@@ -30,29 +39,29 @@
     <main>
         <!--Seccion detalle de presupuestos-->
         <section class="seccion-detalles-eventos">
-            <div class="seccion-header">
+            <div class="titulo-seccion">
                 <h2>Detalle de Presupuestos</h2>
                 <p>
                     Conocé el alcance, cobertura e infraestructura técnica recomendada para cada escala de evento.
                 </p>
             </div>
 
-            <div class="contenedor-columnas">
+            <div class="seccion-servicios-columnas">
                 <!--Evento Íntimo-->
                 <article class="tarjeta-servicio tarjeta-servicio-detalle"
                     style="background-image: url('img/TarjetasServicio/FiestaIntima.jpg');">
-                    <div class="tarjeta-overlay">
+                    <div class="tarjeta-servicio-overlay">
 
-                        <div class="tarjeta-contenido">
+                        <div class="tarjeta-servicio-contenido">
                             <h3>Evento Íntimo</h3>
-                            <span class="etiqueta-info">Espacios De Aprox. 200 m²</span>
-                            <span class="capacidad-personas">De 20 a 80 personas</span>
-                            <p class="desc-evento">
+                            <span class="etiqueta-info-servicio">Espacios De Aprox. 200 m²</span>
+                            <span class="servicio-capacidad-personas">De 20 a 80 personas</span>
+                            <p class="servicio-descripcion">
                                 Celebraciones privadas y salones pequeños donde se
                                 busca nitidez acústica y ambientación cálida.
                             </p>
 
-                            <ul class="lista-ejemplos-evento">
+                            <ul class="tarjeta-servicio-lista">
                                 <li><strong>Servicio DJ:</strong> Incluido</li>
                                 <li><strong>Sonido:</strong> 2 Cajas acústicas Electro Voice</li>
                                 <li><strong>Iluminación:</strong> 4 Tachos LED + 1 Mini beam</li>
@@ -65,17 +74,17 @@
                 <!--Evento Mediano-->
                 <article class="tarjeta-servicio tarjeta-servicio-detalle"
                     style="background-image: url('img/TarjetasServicio/EventoMediano.jpeg');">
-                    <div class="tarjeta-overlay">
+                    <div class="tarjeta-servicio-overlay">
 
-                        <div class="tarjeta-contenido">
+                        <div class="tarjeta-servicio-contenido">
                             <h3>Evento Mediano</h3>
-                            <span class="etiqueta-info">Espacios De Aprox. 900 m²</span>
-                            <span class="capacidad-personas">De 80 a 200 personas</span>
-                            <p class="desc-evento">
+                            <span class="etiqueta-info-servicio">Espacios De Aprox. 900 m²</span>
+                            <span class="servicio-capacidad-personas">De 80 a 200 personas</span>
+                            <p class="servicio-descripcion">
                                 Potencia acústica y show lumínico para salones amplios o predios semicubiertos.
                             </p>
 
-                            <ul class="lista-ejemplos-evento">
+                            <ul class="tarjeta-servicio-lista">
                                 <li><strong>Servicio DJ:</strong> Incluido</li>
                                 <li><strong>Sonido:</strong> 4 Cajas EV + 2 Sub-graves JBL 18"</li>
                                 <li><strong>Iluminación:</strong> Cabezales 150W + Estructura Truss</li>
@@ -88,17 +97,17 @@
                 <!--Evento Grande-->
                 <article class="tarjeta-servicio tarjeta-servicio-detalle"
                     style="background-image: url('img/TarjetasServicio/EventoGrande.jpg');">
-                    <div class="tarjeta-overlay">
+                    <div class="tarjeta-servicio-overlay">
 
-                        <div class="tarjeta-contenido">
+                        <div class="tarjeta-servicio-contenido">
                             <h3>Evento Grande</h3>
-                            <span class="etiqueta-info">Espacios Mayores a 900 m²</span>
-                            <span class="capacidad-personas">200 personas en adelante</span>
-                            <p class="desc-evento">
+                            <span class="etiqueta-info-servicio">Espacios Mayores a 900 m²</span>
+                            <span class="servicio-capacidad-personas">200 personas en adelante</span>
+                            <p class="servicio-descripcion">
                                 Sonido sub-sónico envolvente y show visual inmersivo para grandes dimensiones.
                             </p>
 
-                            <ul class="lista-ejemplos-evento">
+                            <ul class="tarjeta-servicio-lista">
                                 <li><strong>Servicio DJ:</strong> Incluido</li>
                                 <li><strong>Sonido:</strong> Sistema Array EV + 6 Sub-graves JBL</li>
                                 <li><strong>Iluminación:</strong> Parque lumínico + Láser Wall + Maquinas de humo</li>
@@ -112,84 +121,86 @@
 
         <!--Seccion Equipamiento-->
         <section class="seccion-inventario">
-            <div class="seccion-header">
+            <div class="titulo-seccion">
                 <h2>Nuestro Equipamiento</h2>
-                <p>Resumen de todo nuestro equipamiento a disposición para tu evento.</p>
+                <p>
+                    Resumen de todo nuestro equipamiento a disposición para tu evento.
+                </p>
             </div>
 
-            <div class="grid-inventario">
-                <div class="tarjeta-equipamiento">
-                    <div class="titulo-equipamiento">
-                        <img src="img/Iconos/controladorIcon.png" alt="Icono" class="icono-equipamiento">
+            <div class="seccion-inventario-grid">
+                <div class="tarjeta-inventario">
+                    <div class="titulo-inventario">
+                        <img src="img/Iconos/controladorIcon.png" alt="Icono" class="icono-inventario">
                         <h4>Control & Mezcla</h4>
                     </div>
 
-                    <ul class="lista-ejemplos-evento">
+                    <ul class="tarjeta-servicio-lista">
                         <li>Controladores línea Pioneer</li>
                         <li>Bandejas Yamaha</li>
                         <li>Consola mezcladora Rhos-Proco</li>
                     </ul>
                 </div>
 
-                <div class="tarjeta-equipamiento">
-                    <div class="titulo-equipamiento">
-                        <img src="img/Iconos/EcualizadorIcon.png" alt="Icono" class="icono-equipamiento">
+                <div class="tarjeta-inventario">
+                    <div class="titulo-inventario">
+                        <img src="img/Iconos/EcualizadorIcon.png" alt="Icono" class="icono-inventario">
                         <h4>Audio Digital</h4>
                     </div>
 
-                    <ul class="lista-ejemplos-evento">
+                    <ul class="tarjeta-servicio-lista">
                         <li>Procesador de audio de 7 vías</li>
                         <li>Ecualización y Crossover digital</li>
                         <li>Procesador de voz con multiefectos</li>
                     </ul>
                 </div>
 
-                <div class="tarjeta-equipamiento">
-                    <div class="titulo-equipamiento">
-                        <img src="img/Iconos/amplificadorIcon.png" alt="Icono" class="icono-equipamiento">
+                <div class="tarjeta-inventario">
+                    <div class="titulo-inventario">
+                        <img src="img/Iconos/amplificadorIcon.png" alt="Icono" class="icono-inventario">
                         <h4>Potencia & Retorno</h4>
                     </div>
 
-                    <ul class="lista-ejemplos-evento">
+                    <ul class="tarjeta-servicio-lista">
                         <li>Amplificadores MT-NB (5000W)</li>
                         <li>Amplificación sub-sónica</li>
                         <li>Micrófonos Shure profesionales</li>
                     </ul>
                 </div>
 
-                <div class="tarjeta-equipamiento">
-                    <div class="titulo-equipamiento">
-                        <img src="img/Iconos/wooferIcon.png" alt="Icono" class="icono-equipamiento">
+                <div class="tarjeta-inventario">
+                    <div class="titulo-inventario">
+                        <img src="img/Iconos/wooferIcon.png" alt="Icono" class="icono-inventario">
                         <h4>Sub-Graves JBL</h4>
                     </div>
 
-                    <ul class="lista-ejemplos-evento">
+                    <ul class="tarjeta-servicio-lista">
                         <li>6 Sub-graves de 18 pulgadas</li>
                         <li>Woofer JBL (Origen USA)</li>
                         <li>Respuesta profunda sub-sónica</li>
                     </ul>
                 </div>
 
-                <div class="tarjeta-equipamiento">
-                    <div class="titulo-equipamiento">
-                        <img src="img/Iconos/wooferIcon.png" alt="Icono" class="icono-equipamiento">
+                <div class="tarjeta-inventario">
+                    <div class="titulo-inventario">
+                        <img src="img/Iconos/wooferIcon.png" alt="Icono" class="icono-inventario">
                         <h4>Cajas Electro Voice</h4>
                     </div>
 
-                    <ul class="lista-ejemplos-evento">
+                    <ul class="tarjeta-servicio-lista">
                         <li>Cajas inyectadas con woofer EV 15"</li>
                         <li>Cajas dobles con woofer EV 12" y 15"</li>
                         <li>Sistema Array de alta calidad</li>
                     </ul>
                 </div>
 
-                <div class="tarjeta-equipamiento">
-                    <div class="titulo-equipamiento">
-                        <img src="img/Iconos/Iluminacion2.png" alt="Icono" class="icono-equipamiento">
+                <div class="tarjeta-inventario">
+                    <div class="titulo-inventario">
+                        <img src="img/Iconos/Iluminacion2.png" alt="Icono" class="icono-inventario">
                         <h4>Iluminación & Efectos</h4>
                     </div>
 
-                    <ul class="lista-ejemplos-evento">
+                    <ul class="tarjeta-servicio-lista">
                         <li>Cabezales móviles 150W y LED</li>
                         <li>Láseres DMX y Láser Wall</li>
                         <li>Humo convencional y humo bajo</li>
@@ -201,21 +212,23 @@
 
         <!--Seccion servicio tecnico-->
         <section class="seccion-servicio-tecnico" id="servicio-tecnico">
-            <div class="seccion-header">
+            <div class="titulo-seccion">
                 <h2>Servicio Técnico Especializado</h2>
-                <p>Mantenimiento, reparación y puesta a punto para alargar la vida útil de tus equipos.</p>
+                <p>
+                    Mantenimiento, reparación y puesta a punto para alargar la vida útil de tus equipos.
+                </p>
             </div>
 
             <div class="tarjeta-servicio-tecnico">
-                <div class="contenido-tecnico">
+                <div class="servicio-tecnico-contenido">
                     <h3>Reparación de Equipos de Sonido</h3>
-                    <p class="desc-tecnico">
+                    <p class="servicio-tecnico-descripcion">
                         ¿Tus equipos sufrieron desgaste o necesitan una revisión profesional?
                         Contamos con taller especializado para asegurar que cada componente funcione al 100% de su
                         rendimiento.
                     </p>
 
-                    <ul class="lista-ejemplos-evento">
+                    <ul class="tarjeta-servicio-lista">
                         <li><strong>Reparación de parlantes:</strong> Rebobinado, cambio de conos y componentes de alta
                             fidelidad.</li>
                         <li><strong>Electrónica y amplificadores:</strong> Diagnóstico y reparación de placas y etapas
@@ -226,10 +239,15 @@
                             contactos.</li>
                     </ul>
 
-                    <div class="cta-tecnico">
-                        <a href="https://api.whatsapp.com/send?phone=2657546590" target="_blank" class="btn-tarjeta">
-                            <span>Contáctate con nosotros directamente para la revision de tus equipos.</span>
-                            <span>+54 9 2657 54 6590</span>
+                    <div class="servicio-tecnico-link">
+                        <a href="https://api.whatsapp.com/send?phone=2657546590" target="_blank" rel="noopener">
+                            <span>
+                                Contáctate con nosotros directamente para la revisión de tus equipos
+                            </span>
+                            <span>
+                                <img src="img/Iconos/WhatsappIcon.png" alt="WhatsApp" class="icono-whatsapp">
+                                +54 9 2657 54 6590
+                            </span>
                         </a>
                     </div>
                 </div>
@@ -240,21 +258,20 @@
     <!--Footer del documento.-->
     <footer class="footer-del-sitio">
         <div class="footer-container">
-            <!--Columna 1 de footer: logo y marca-->
+            <!--Columna 1: Marca y Logo-->
             <div class="footer-columna">
-                <div class="caja-de-marca">
-                    <div class="caja-logo-footer">
-                        <img src="img/logoSolo.png" alt="Logo De Sonido Montañez Medina" id="logo-footer">
-                    </div>
-                    <h3 class="titulo-marca">Sonido Montañez Medina</h3>
+                <div class="caja-logo-footer">
+                    <img src="img/logoSolo.png" alt="Logo De Sonido Montañez Medina" id="logo-footer">
                 </div>
+                <h3 class="titulo-marca">Sonido Montañez Medina</h3>
                 <span class="footer-texto">Sonido e iluminación profesional</span>
             </div>
-            <!--Columna 2 de footer: Contacto y Ubicación-->
+
+            <!--Columna 2: Contacto y Ubicación-->
             <div class="footer-columna">
                 <h4 class="footer-contacto-y-ubicacion">Contacto & Ubicación</h4>
                 <ul class="footer-list">
-                    <!--Ubicacion-->
+                    <!-- Ubicación -->
                     <li class="contacto-item">
                         <div class="caja-icon">
                             <img src="img/Iconos/UbicacionIcon.png" alt="Ubicación" class="footer-icon">
@@ -262,7 +279,7 @@
                         <span>Villa Mercedes, San Luis, Argentina</span>
                         <img src="img/Iconos/ArgentinaIcon.png" alt="Bandera Argentina" class="footer-icon-argentina">
                     </li>
-                    <!--Instagram-->
+                    <!-- Instagram -->
                     <li class="contacto-item">
                         <a href="https://www.instagram.com/montanez.medina.sonido/" target="_blank" rel="noopener">
                             <div class="caja-icon">
@@ -271,7 +288,7 @@
                             <span>montanez.medina.sonido</span>
                         </a>
                     </li>
-                    <!--WhatsApp-->
+                    <!-- WhatsApp 1 -->
                     <li class="contacto-item">
                         <a href="https://api.whatsapp.com/send/?phone=2657217327&text&type=phone_number&app_absent=0"
                             target="_blank" rel="noopener">
@@ -281,7 +298,7 @@
                             <span>+54 9 2657 21 7327</span>
                         </a>
                     </li>
-                    <!--WhatsApp 2-->
+                    <!-- WhatsApp 2 -->
                     <li class="contacto-item">
                         <a href="https://api.whatsapp.com/send?phone=2657546590" target="_blank" rel="noopener">
                             <div class="caja-icon">
@@ -293,13 +310,12 @@
                 </ul>
             </div>
         </div>
-        <!--Seccion de copyright-->
+
+        <!-- Sección de copyright -->
         <div class="footer-bottom">
             <p>© 2026 Sonido Montañez Medina. Todos los derechos reservados.</p>
         </div>
     </footer>
 </body>
-
-
 
 </html>

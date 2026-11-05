@@ -4,20 +4,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Servicio DJ</title>
+    <title>Servicio de DJ</title>
+    
+    <!--Enlaces a Logo del Title-->
+    <link rel="icon" type="image/png" href="img/logoSolo.png">
+
+    <!--Enlaces a Tipografias.-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
     <!--Enlace a los estilos CSS.-->
-    <link rel="stylesheet" href="estilos/estilos.css">
+    <link rel="stylesheet" href="estilos/Estilos.css">
 </head>
 
 <body>
-    <!--Sección del Titulo y del menú de navegación.-->
-    <header class="header-principal">
-        <div class="caja-logo-header">
-            <img src="img/logoSolo.png" alt="Logo de Sonido Montañez Medina" id="logo-header">
-            <span class="nombre-marca">Sonido Montañez Medina</span>
+    <!--Sección del titulo y del menú.-->
+    <header class="header-pagina">
+        <div class="header-contenedor-logo">
+            <img src="img/logoSolo.png" alt="Logo de Sonido Montañez Medina" id="header-logo">
+            <span class="header-titulo">Sonido Montañez Medina</span>
         </div>
 
-        <nav class="menu">
+        <nav class="header-menu">
             <ul>
                 <li><a href="index.html">Inicio</a></li>
                 <li><a href="servicios-dj.html" class="activo">Servicio DJ</a></li>
@@ -28,26 +37,21 @@
     </header>
 
     <main>
-        <!-- Cabecera de la sección -->
-        <section class="seccion-header">
-            <span class="etiqueta-contacto-top">STAFF DE ARTISTAS</span>
+        <section class="titulo-seccion titulo-seccion-linea">
             <h2>Servicio DJ</h2>
-            <p>Musicalización profesional, mezcla en vivo y la mejor energía para la pista de tu evento.</p>
-            <hr style="border: none; height: 2px; background-color: #FFD369; width: 100%; margin-top: 15px;">
+            <p>
+                Musicalización profesional, mezcla en vivo y la mejor energía para la pista de tu evento.
+            </p>
         </section>
 
-        <!-- Contenedor de las tarjetas de los DJs -->
-        <section class="dj">
+        <section class="seccion-dj-columnas">
+            <!--Tarjeta DJ Nano Medina-->
+            <div class="tarjeta-dj dj-nano">
+                <div class="tarjeta-dj-overlay">
+                    <h4>DJ Nano Medina</h4>
 
-            <!-- Tarjeta DJ Nano Medina -->
-            <div class="tarjetadj djnano">
-                <div class="tarjeta-overlay-dj">
-                    <div class="contenido">
-                        <h4>DJ Nano Medina</h4>
-                    </div>
-
-                    <!-- 1. TEXTO ESTÁTICO (Siempre visible, se oculta al hacer hover) -->
-                    <div class="dj-bio-estatica">
+                    <!--Biografia-->
+                    <div class="tarjeta-dj-bio">
                         <p>
                             Jonathan Medina, mejor conocido como Nano, es oriundo de Villa Mercedes, San Luis. Inspirado
                             en los grandes exponentes de la electrónica de los 90 y 2000 (Tiesto, Chemical Brothers,
@@ -56,28 +60,29 @@
                         </p>
                     </div>
 
-                    <!-- 2. PANEL DE CONTACTOS (Oculto por defecto, se despliega y muestra al hacer hover) -->
-                    <div class="info">
-                        <div class="listainfo">
-                            <span class="titulo-contacto-hover">REDES & CONTACTO</span>
+                    <!--Redes-->
+                    <div class="tarjeta-dj-redes">
+                        <div class="dj-redes-contenedor">
+                            <span class="titulo-redes">REDES & CONTACTO</span>
+
                             <ul class="dj-redes-lista">
                                 <li>
-                                    <img src="img/Iconos/igIcon.png" alt="Instagram" class="iconoig">
+                                    <img src="img/Iconos/igIcon.png" alt="Instagram" class="dj-redes-icono">
                                     <a href="https://www.instagram.com/nanomedinaa/" target="_blank"
                                         rel="noopener">Instagram (@nanomedinaa)</a>
                                 </li>
                                 <li>
-                                    <img src="img/Iconos/facebookIcon.png" alt="Facebook" class="iconoig">
+                                    <img src="img/Iconos/facebookIcon.png" alt="Facebook" class="dj-redes-icono">
                                     <a href="https://www.facebook.com/NANO.MEDINA1/" target="_blank"
                                         rel="noopener">Facebook (Nano Medina)</a>
                                 </li>
                                 <li>
-                                    <img src="img/Iconos/youtubeIcon.png" alt="YouTube" class="iconoig">
+                                    <img src="img/Iconos/youtubeIcon.png" alt="YouTube" class="dj-redes-icono">
                                     <a href="https://www.youtube.com/@NANOOMEDINAA" target="_blank"
                                         rel="noopener">YouTube (@nanoomedinaa)</a>
                                 </li>
                                 <li>
-                                    <img src="img/Iconos/soundcloudIcon.png" alt="SoundCloud" class="iconoig">
+                                    <img src="img/Iconos/soundcloudIcon.png" alt="SoundCloud" class="dj-redes-icono">
                                     <a href="https://soundcloud.com/nano-medina-40483312" target="_blank"
                                         rel="noopener">SoundCloud (Nano Medina)</a>
                                 </li>
@@ -88,14 +93,12 @@
             </div>
 
             <!-- Tarjeta DJ Yani Montañez -->
-            <div class="tarjetadj djyani">
-                <div class="tarjeta-overlay-dj">
-                    <div class="contenido">
-                        <h4>DJ Yani Montañez</h4>
-                    </div>
+            <div class="tarjeta-dj dj-yani">
+                <div class="tarjeta-dj-overlay">
+                    <h4>DJ Yani Montañez</h4>
 
-                    <!-- 1. TEXTO ESTÁTICO (Siempre visible, se oculta al hacer hover) -->
-                    <div class="dj-bio-estatica">
+                    <!--Biografia-->
+                    <div class="tarjeta-dj-bio">
                         <p>
                             Yanina nace en Villa Mercedes, San Luis. Desde pequeña influenciada por los sonidos de los
                             80's y la electrónica gracias a su padre técnico. Sus sets varían entre Progressive House,
@@ -103,28 +106,28 @@
                         </p>
                     </div>
 
-                    <!-- 2. PANEL DE CONTACTOS (Oculto por defecto, se despliega y muestra al hacer hover) -->
-                    <div class="info">
-                        <div class="listainfo">
-                            <span class="titulo-contacto-hover">REDES & CONTACTO</span>
+                    <div class="tarjeta-dj-redes">
+                        <div class="dj-redes-contenedor">
+                            <span class="titulo-redes">REDES & CONTACTO</span>
+
                             <ul class="dj-redes-lista">
                                 <li>
-                                    <img src="img/Iconos/igIcon.png" alt="Instagram" class="iconoig">
+                                    <img src="img/Iconos/igIcon.png" alt="Instagram" class="dj-redes-icono">
                                     <a href="https://www.instagram.com/yani.montanez" target="_blank"
                                         rel="noopener">Instagram (@yani.montanez)</a>
                                 </li>
                                 <li>
-                                    <img src="img/Iconos/facebookIcon.png" alt="Facebook" class="iconoig">
+                                    <img src="img/Iconos/facebookIcon.png" alt="Facebook" class="dj-redes-icono">
                                     <a href="https://www.facebook.com/YANI.MONTANEZ" target="_blank"
                                         rel="noopener">Facebook (Yani Montañez)</a>
                                 </li>
                                 <li>
-                                    <img src="img/Iconos/youtubeIcon.png" alt="YouTube" class="iconoig">
+                                    <img src="img/Iconos/youtubeIcon.png" alt="YouTube" class="dj-redes-icono">
                                     <a href="https://www.youtube.com/@YANIMONTANEZ" target="_blank"
                                         rel="noopener">YouTube (@yanimontanez)</a>
                                 </li>
                                 <li>
-                                    <img src="img/Iconos/soundcloudIcon.png" alt="SoundCloud" class="iconoig">
+                                    <img src="img/Iconos/soundcloudIcon.png" alt="SoundCloud" class="dj-redes-icono">
                                     <a href="https://soundcloud.com/yanina-luciana-montanez" target="_blank"
                                         rel="noopener">SoundCloud (Yanina Montañez)</a>
                                 </li>
@@ -133,29 +136,26 @@
                     </div>
                 </div>
             </div>
-
         </section>
     </main>
 
     <!--Footer del documento.-->
     <footer class="footer-del-sitio">
         <div class="footer-container">
-            <!--Columna 1 de footer: logo y marca-->
+            <!--Columna 1: Marca y Logo-->
             <div class="footer-columna">
-                <div class="caja-de-marca">
-                    <div class="caja-logo-footer">
-                        <img src="img/logoSolo.png" alt="Logo De Sonido Montañez Medina" id="logo-footer">
-                    </div>
-                    <h3 class="titulo-marca">Sonido Montañez Medina</h3>
+                <div class="caja-logo-footer">
+                    <img src="img/logoSolo.png" alt="Logo De Sonido Montañez Medina" id="logo-footer">
                 </div>
+                <h3 class="titulo-marca">Sonido Montañez Medina</h3>
                 <span class="footer-texto">Sonido e iluminación profesional</span>
             </div>
 
-            <!--Columna 2 de footer: Contacto y Ubicación-->
+            <!--Columna 2: Contacto y Ubicación-->
             <div class="footer-columna">
                 <h4 class="footer-contacto-y-ubicacion">Contacto & Ubicación</h4>
                 <ul class="footer-list">
-                    <!--Ubicacion-->
+                    <!-- Ubicación -->
                     <li class="contacto-item">
                         <div class="caja-icon">
                             <img src="img/Iconos/UbicacionIcon.png" alt="Ubicación" class="footer-icon">
@@ -163,7 +163,7 @@
                         <span>Villa Mercedes, San Luis, Argentina</span>
                         <img src="img/Iconos/ArgentinaIcon.png" alt="Bandera Argentina" class="footer-icon-argentina">
                     </li>
-                    <!--Instagram-->
+                    <!-- Instagram -->
                     <li class="contacto-item">
                         <a href="https://www.instagram.com/montanez.medina.sonido/" target="_blank" rel="noopener">
                             <div class="caja-icon">
@@ -172,7 +172,7 @@
                             <span>montanez.medina.sonido</span>
                         </a>
                     </li>
-                    <!--WhatsApp-->
+                    <!-- WhatsApp 1 -->
                     <li class="contacto-item">
                         <a href="https://api.whatsapp.com/send/?phone=2657217327&text&type=phone_number&app_absent=0"
                             target="_blank" rel="noopener">
@@ -182,7 +182,7 @@
                             <span>+54 9 2657 21 7327</span>
                         </a>
                     </li>
-                    <!--WhatsApp 2-->
+                    <!-- WhatsApp 2 -->
                     <li class="contacto-item">
                         <a href="https://api.whatsapp.com/send?phone=2657546590" target="_blank" rel="noopener">
                             <div class="caja-icon">
@@ -194,11 +194,13 @@
                 </ul>
             </div>
         </div>
-        <!--Seccion de copyright-->
+
+        <!-- Sección de copyright -->
         <div class="footer-bottom">
             <p>© 2026 Sonido Montañez Medina. Todos los derechos reservados.</p>
         </div>
     </footer>
+
 </body>
 
 </html>

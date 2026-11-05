@@ -6,19 +6,27 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sonido Montañez Medina</title>
 
+    <!--Enlace a logo del title-->
+    <link rel="icon" type="image/png" href="img/logoSolo.png">
+
+    <!--Enlaces a tipografias.-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
     <!--Enlace a los estilos CSS.-->
-    <link rel="stylesheet" href="estilos/estilos.css">
+    <link rel="stylesheet" href="estilos/Estilos.css">
 </head>
 
 <body>
-    <!--Sección del Titulo y del menú de navegación.-->
-    <header class="header-principal">
-        <div class="caja-logo-header">
-            <img src="img/logoSolo.png" alt="Logo de Sonido Montañez Medina" id="logo-header">
-            <span class="nombre-marca">Sonido Montañez Medina</span>
+    <!--Sección del titulo y del menú.-->
+    <header class="header-pagina">
+        <div class="header-contenedor-logo">
+            <img src="img/logoSolo.png" alt="Logo de Sonido Montañez Medina" id="header-logo">
+            <span class="header-titulo">Sonido Montañez Medina</span>
         </div>
 
-        <nav class="menu">
+        <nav class="header-menu">
             <ul>
                 <li><a href="index.html" class="activo">Inicio</a></li>
                 <li><a href="servicios-dj.html">Servicio DJ</a></li>
@@ -32,14 +40,14 @@
         <!--Sección de Bienvenida.-->
         <section class="seccion-bienvenida">
             <h2>Sonido, Iluminación Y DJ Para Tus Eventos</h2>
-            <p class="bienvenida-desc">
+            <p class="bienvenida-descripcion">
                 Ofrecemos soluciones profesionales para que tu evento suene y se vea como lo imaginás. <br>
                 Contamos con servicios de alquiler, musicalización y soporte técnico para cubrir todas tus necesidades.
             </p>
 
             <div class="bienvenida-lista">
                 <div class="bienvenida-item">
-                    <div class="bienvenida-icono">
+                    <div class="bienvenida-icono-lista">
                         <img src="img/Iconos/NotaMusical.png" alt="Icono De Nota Musical">
                     </div>
                     <div>
@@ -49,7 +57,7 @@
                 </div>
 
                 <div class="bienvenida-item">
-                    <div class="bienvenida-icono">
+                    <div class="bienvenida-icono-lista">
                         <img src="img/Iconos/Iluminacion.png" alt="Icono De Iluminación">
                     </div>
                     <div>
@@ -59,7 +67,7 @@
                 </div>
 
                 <div class="bienvenida-item">
-                    <div class="bienvenida-icono">
+                    <div class="bienvenida-icono-lista">
                         <img src="img/Iconos/Herramienta.png" alt="Icono De Herramienta">
                     </div>
                     <div>
@@ -72,7 +80,7 @@
 
         <!--Sección del Carrusel.-->
         <section class="seccion-carrusel">
-            <div class="seccion-header">
+            <div class="titulo-seccion">
                 <h2>Destacado</h2>
                 <p>
                     Imágenes de fiestas, eventos y trabajos recientes.
@@ -83,11 +91,13 @@
                 <button id="btn-carrusel-anterior" aria-label="Imagen anterior">
                     <img src="img/Iconos/flechaCarrusel.png" alt="Anterior" class="icono-flecha-carrusel">
                 </button>
-                <div class="contenedor-tarjeta">
+
+                <div class="contenedor-tarjeta-carrusel">
                     <div class="tarjeta-carrusel">
                         <img id="img-carrusel" class="img-carrusel" src="" alt="">
                     </div>
                 </div>
+
                 <button id="btn-carrusel-posterior" aria-label="Siguiente imagen">
                     <img src="img/Iconos/flechaCarrusel.png" alt="Siguiente" class="icono-flecha-carrusel">
                 </button>
@@ -96,26 +106,26 @@
 
         <!--Sección de Servicios.-->
         <section class="seccion-servicios">
-            <div class="seccion-header">
+            <div class="titulo-seccion">
                 <h2>Nuestros Servicios</h2>
                 <p>
                     Explorá nuestras opciones de presupuestos, servicios de DJ y soporte técnico.
                 </p>
             </div>
 
-            <div class="contenedor-columnas">
+            <div class="seccion-servicios-columnas">
                 <!--Evento Íntimo-->
                 <article class="tarjeta-servicio"
                     style="background-image: url('img/TarjetasServicio/FiestaIntima.jpg');">
-                    <div class="tarjeta-overlay">
+                    <div class="tarjeta-servicio-overlay">
 
-                        <div class="tarjeta-contenido">
+                        <div class="tarjeta-servicio-contenido">
                             <h3>Evento Íntimo</h3>
                             <p>
                                 Ideal para eventos íntimos. Incluye servicio de DJ e iluminación adaptada al salón.
                             </p>
 
-                            <ul class="lista-ejemplos-evento">
+                            <ul class="tarjeta-servicio-lista">
                                 <li>Cumpleaños y aniversarios</li>
                                 <li>Fiestas familiares</li>
                                 <li>Celebraciones privadas</li>
@@ -123,7 +133,7 @@
                             </ul>
                         </div>
 
-                        <a href="servicios-sonido.html#evento-intimo" class="btn-tarjeta">
+                        <a href="servicios-sonido.html#evento-intimo" class="btn-tarjeta-servicio">
                             <span>Ver Detalles</span>
                             <div class="circulo-flecha">
                                 <img src="img/Iconos/flecha.png" alt="Ir" class="icono-flecha">
@@ -135,68 +145,64 @@
                 <!--Evento Mediano-->
                 <article class="tarjeta-servicio"
                     style="background-image: url('img/TarjetasServicio/EventoMediano.jpeg');">
-                    <div class="tarjeta-overlay">
+                    <div class="tarjeta-servicio-overlay">
 
-                        <div class="tarjeta-contenido">
+                        <div class="tarjeta-servicio-contenido">
                             <h3>Evento Mediano</h3>
                             <p>
                                 Perfecto para fiestas grandes. Incluye DJ e iluminación de alta potencia.
                             </p>
 
-                            <ul class="lista-ejemplos-evento">
+                            <ul class="tarjeta-servicio-lista">
                                 <li>Fiestas de Fin de Año/Navidad</li>
                                 <li>Eventos corporativos y de empresa</li>
                                 <li>Egresos y fiestas universitarias</li>
                                 <li>Salones amplios o predios abiertos</li>
                             </ul>
-
                         </div>
 
-                        <a href="servicios-sonido.html#evento-mediano" class="btn-tarjeta">
+                        <a href="servicios-sonido.html#evento-mediano" class="btn-tarjeta-servicio">
                             <span>Ver Detalles</span>
                             <div class="circulo-flecha">
                                 <img src="img/Iconos/flecha.png" alt="Ir" class="icono-flecha">
                             </div>
                         </a>
-
                     </div>
                 </article>
 
                 <!--Eventos grandes-->
                 <article class="tarjeta-servicio"
                     style="background-image: url('img/TarjetasServicio/EventoGrande.jpg');">
-                    <div class="tarjeta-overlay">
+                    <div class="tarjeta-servicio-overlay">
 
-                        <div class="tarjeta-contenido">
+                        <div class="tarjeta-servicio-contenido">
                             <h3>Eventos Grandes</h3>
                             <p>
                                 Para grandes eventos. Incluye DJ, iluminación y sistemas adicionales para ambientes
                                 extras.
                             </p>
 
-                            <ul class="lista-ejemplos-evento">
+                            <ul class="tarjeta-servicio-lista">
                                 <li>Fiestas multitudinarias</li>
                                 <li>Aniversarios e inauguraciones masivas</li>
                                 <li>Recintos multiespacio o al aire libre</li>
                             </ul>
-
                         </div>
 
-                        <a href="servicios-sonido.html#evento-grande" class="btn-tarjeta">
+                        <a href="servicios-sonido.html#evento-grande" class="btn-tarjeta-servicio">
                             <span>Ver Detalles</span>
                             <div class="circulo-flecha">
                                 <img src="img/Iconos/flecha.png" alt="Ir" class="icono-flecha">
                             </div>
                         </a>
-
                     </div>
                 </article>
 
                 <!--Servicios de DJ-->
                 <article class="tarjeta-servicio" style="background-image: url('img/TarjetasServicio/ServicioDJ.jpg');">
-                    <div class="tarjeta-overlay">
+                    <div class="tarjeta-servicio-overlay">
 
-                        <div class="tarjeta-contenido">
+                        <div class="tarjeta-servicio-contenido">
                             <h3>Servicio DJ</h3>
                             <p>
                                 Musicalización personalizada, mezclas en vivo con equipos Pioneer y la mejor energía
@@ -204,29 +210,28 @@
                             </p>
                         </div>
 
-                        <a href="servicios-dj.html" class="btn-tarjeta">
+                        <a href="servicios-dj.html" class="btn-tarjeta-servicio">
                             <span>Conocer DJs</span>
                             <div class="circulo-flecha">
                                 <img src="img/Iconos/flecha.png" alt="Ir" class="icono-flecha">
                             </div>
                         </a>
-
                     </div>
                 </article>
 
                 <!--Servicio Técnico-->
                 <article class="tarjeta-servicio"
                     style="background-image: url('img/TarjetasServicio/Reparacion.jpeg');">
-                    <div class="tarjeta-overlay">
+                    <div class="tarjeta-servicio-overlay">
 
-                        <div class="tarjeta-contenido">
+                        <div class="tarjeta-servicio-contenido">
                             <h3>Servicio Técnico</h3>
                             <p>
                                 Revisión, reparación y puesta a punto de parlantes, amplificadores y consolas de audio.
                             </p>
                         </div>
 
-                        <a href="servicios-sonido.html#servicio-tecnico" class="btn-tarjeta">
+                        <a href="servicios-sonido.html#servicio-tecnico" class="btn-tarjeta-servicio">
                             <span>Saber Más</span>
                             <div class="circulo-flecha">
                                 <img src="img/Iconos/flecha.png" alt="Ir" class="icono-flecha">
@@ -238,27 +243,25 @@
 
             </div>
         </section>
-
     </main>
 
     <!--Footer del documento.-->
     <footer class="footer-del-sitio">
         <div class="footer-container">
-            <!--Columna 1 de footer: logo y marca-->
+            <!--Columna 1: Marca y Logo-->
             <div class="footer-columna">
-                <div class="caja-de-marca">
-                    <div class="caja-logo-footer">
-                        <img src="img/logoSolo.png" alt="Logo De Sonido Montañez Medina" id="logo-footer">
-                    </div>
-                    <h3 class="titulo-marca">Sonido Montañez Medina</h3>
+                <div class="caja-logo-footer">
+                    <img src="img/logoSolo.png" alt="Logo De Sonido Montañez Medina" id="logo-footer">
                 </div>
+                <h3 class="titulo-marca">Sonido Montañez Medina</h3>
                 <span class="footer-texto">Sonido e iluminación profesional</span>
             </div>
-            <!--Columna 2 de footer: Contacto y Ubicación-->
+
+            <!--Columna 2: Contacto y Ubicación-->
             <div class="footer-columna">
                 <h4 class="footer-contacto-y-ubicacion">Contacto & Ubicación</h4>
                 <ul class="footer-list">
-                    <!--Ubicacion-->
+                    <!-- Ubicación -->
                     <li class="contacto-item">
                         <div class="caja-icon">
                             <img src="img/Iconos/UbicacionIcon.png" alt="Ubicación" class="footer-icon">
@@ -266,7 +269,7 @@
                         <span>Villa Mercedes, San Luis, Argentina</span>
                         <img src="img/Iconos/ArgentinaIcon.png" alt="Bandera Argentina" class="footer-icon-argentina">
                     </li>
-                    <!--Instagram-->
+                    <!-- Instagram -->
                     <li class="contacto-item">
                         <a href="https://www.instagram.com/montanez.medina.sonido/" target="_blank" rel="noopener">
                             <div class="caja-icon">
@@ -275,7 +278,7 @@
                             <span>montanez.medina.sonido</span>
                         </a>
                     </li>
-                    <!--WhatsApp-->
+                    <!-- WhatsApp 1 -->
                     <li class="contacto-item">
                         <a href="https://api.whatsapp.com/send/?phone=2657217327&text&type=phone_number&app_absent=0"
                             target="_blank" rel="noopener">
@@ -285,7 +288,7 @@
                             <span>+54 9 2657 21 7327</span>
                         </a>
                     </li>
-                    <!--WhatsApp 2-->
+                    <!-- WhatsApp 2 -->
                     <li class="contacto-item">
                         <a href="https://api.whatsapp.com/send?phone=2657546590" target="_blank" rel="noopener">
                             <div class="caja-icon">
@@ -297,7 +300,8 @@
                 </ul>
             </div>
         </div>
-        <!--Seccion de copyright-->
+
+        <!-- Sección de copyright -->
         <div class="footer-bottom">
             <p>© 2026 Sonido Montañez Medina. Todos los derechos reservados.</p>
         </div>
@@ -305,7 +309,6 @@
 
     <!--Conexión del carrusel con javaScript.-->
     <script src="javascript/carrusel.js"></script>
-
 </body>
 
 </html>
