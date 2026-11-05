@@ -509,11 +509,11 @@ section {
 }
 
 .dj-nano {
-    background-image: url('/img/DJ/imgnano.jpg');
+    background-image: url('../img/DJ/imgnano.jpg');
 }
 
 .dj-yani {
-    background-image: url('/img/DJ/imgyani.jpg');
+    background-image: url('../img/DJ/imgyani.jpg');
 }
 
 .tarjeta-dj:hover {
