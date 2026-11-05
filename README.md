@@ -10,6 +10,8 @@ Nombre de los estudiantes:
 Santiago Nicolas Medina
 Facundo Jesús Bartoloni
 
+Usamos imagenes propias y algunos iconos provenientes de https://www.flaticon.es/
+
 Instrucciones básicas de uso:
 1. Clonar el repositorio en su PC o abrir el ultimo despliegue de GitHub Pages.
 2. Abrir el archivo 'index.html' en cualquier navegador web.
