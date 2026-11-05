@@ -25,10 +25,6 @@ function actualizarCarrusel() {
     }, 400);
 }
 
-    imgElemento.src = imagenes[indiceActual];
-    imgElemento.alt = "Imagen destacada del evento 1";
-
-
 //Evento Avanzar.
 btnSiguiente.addEventListener('click', () => {
     indiceActual++;
