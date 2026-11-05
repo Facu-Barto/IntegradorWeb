@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', () => {
     const formulario = document.querySelector('.contenedor-formulario form');
-    
+
     // Referencias a los campos
     const inputNombre = document.getElementById('nombre');
     const inputCorreo = document.getElementById('correo');
@@ -13,11 +13,11 @@ document.addEventListener('DOMContentLoaded', () => {
     function mostrarError(input, mensaje) {
         limpiarError(input);
         input.classList.add('input-error');
-        
+
         const errorDiv = document.createElement('div');
         errorDiv.className = 'mensaje-error-dinamico';
         errorDiv.textContent = mensaje;
-        
+
         input.parentElement.appendChild(errorDiv);
     }
 
@@ -152,51 +152,66 @@ document.addEventListener('DOMContentLoaded', () => {
         // Si todo es válido
         if (esValido) {
             const contenedorFormulario = document.querySelector('.contenedor-formulario');
-            
-            formulario.style.display = 'none';
 
-            const tarjetaResumen = document.createElement('div');
-            tarjetaResumen.className = 'resumen-envio-exitoso';
+            const formData = new FormData(formulario);
 
-            const tituloExito = document.createElement('h3');
-            tituloExito.textContent = '¡Consulta enviada con éxito!';
-            tarjetaResumen.appendChild(tituloExito);
+            fetch(formulario.action, {
+                method: formulario.method,
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    formulario.style.display = 'none';
 
-            const textoSub = document.createElement('p');
-            textoSub.textContent = 'A continuación, el resumen de los datos enviados:';
-            tarjetaResumen.appendChild(textoSub);
+                    const tarjetaResumen = document.createElement('div');
+                    tarjetaResumen.className = 'resumen-envio-exitoso';
 
-            const listaResumen = document.createElement('ul');
+                    const tituloExito = document.createElement('h3');
+                    tituloExito.textContent = '¡Consulta enviada con éxito!';
+                    tarjetaResumen.appendChild(tituloExito);
 
-            const datosAEnviar = [
-                { label: 'Nombre y Apellido', val: inputNombre.value },
-                { label: 'Email', val: inputCorreo.value },
-                { label: 'Teléfono', val: inputTelefono.value },
-                { label: 'Tipo de Evento', val: selectServicio.value },
-                { label: 'Fecha Estimada', val: inputFecha.value },
-                { label: 'Descripción', val: txtDetalles.value.trim() || 'Sin especificar' }
-            ];
+                    const textoSub = document.createElement('p');
+                    textoSub.textContent = 'A continuación, el resumen de los datos enviados:';
+                    tarjetaResumen.appendChild(textoSub);
 
-            datosAEnviar.forEach(item => {
-                const li = document.createElement('li');
-                li.innerHTML = `<strong>${item.label}:</strong> ${item.val}`;
-                listaResumen.appendChild(li);
+                    const listaResumen = document.createElement('ul');
+
+                    const datosAEnviar = [
+                        { label: 'Nombre y Apellido', val: inputNombre.value },
+                        { label: 'Email', val: inputCorreo.value },
+                        { label: 'Teléfono', val: inputTelefono.value },
+                        { label: 'Tipo de Evento', val: selectServicio.value },
+                        { label: 'Fecha Estimada', val: inputFecha.value },
+                        { label: 'Descripción', val: txtDetalles.value.trim() || 'Sin especificar' }
+                    ];
+
+                    datosAEnviar.forEach(item => {
+                        const li = document.createElement('li');
+                        li.innerHTML = `<strong>${item.label}:</strong> ${item.val}`;
+                        listaResumen.appendChild(li);
+                    });
+
+                    tarjetaResumen.appendChild(listaResumen);
+
+                    const btnReiniciar = document.createElement('button');
+                    btnReiniciar.textContent = '← ENVIAR OTRA CONSULTA';
+                    btnReiniciar.className = 'btn-enviar-contacto';
+
+                    btnReiniciar.addEventListener('click', () => {
+                        formulario.reset();
+                        formulario.style.display = 'block';
+                        tarjetaResumen.remove();
+                    });
+
+                    tarjetaResumen.appendChild(btnReiniciar);
+                    contenedorFormulario.appendChild(tarjetaResumen);
+                } else {
+                    alert('Hubo un error al conectar con el servidor.');
+                }
+            }).catch(error => {
+                alert('Error de red al enviar el formulario.');
             });
-
-            tarjetaResumen.appendChild(listaResumen);
-
-            const btnReiniciar = document.createElement('button');
-            btnReiniciar.textContent = '← ENVIAR OTRA CONSULTA';
-            btnReiniciar.className = 'btn-enviar-contacto';
-
-            btnReiniciar.addEventListener('click', () => {
-                formulario.reset();
-                formulario.style.display = 'block';
-                tarjetaResumen.remove();
-            });
-
-            tarjetaResumen.appendChild(btnReiniciar);
-            contenedorFormulario.appendChild(tarjetaResumen);
         }
     });
-});
