@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const contenedorFormulario = document.querySelector('.contenedor-formulario');
 
             const formData = new FormData(formulario);
-
+            
             fetch(formulario.action, {
                 method: formulario.method,
                 body: formData,
@@ -215,3 +215,4 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         }
     });
+});
